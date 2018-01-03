@@ -55,7 +55,8 @@ class Configurator:
             os.environ.update(docker_env)
         subprocess.call(['docker', 'build', '-t', 'tomes-pst-converter', '.'])
         print("Building Tomes Docker Application....")
-        subprocess.call(['docker-compose', '../app_devel_build/docker_compose.yml'])
+        os.chdir("../Servers/app_devel_build/")
+        subprocess.call(['docker-compose', 'build'])
 
 
 if __name__ == "__main__":
