@@ -53,7 +53,9 @@ class Configurator:
                           "DOCKER_CERT_PATH": "E:\\bin\\machines\\default",
                           "COMPOSE_CONVERT_WINDOWS_PATHS": "true"}
             os.environ.update(docker_env)
-        subprocess.run(['docker', 'build', '-t', 'tomes-pst-converter', '.'])
+        subprocess.call(['docker', 'build', '-t', 'tomes-pst-converter', '.'])
+        print("Building Tomes Docker Application....")
+        subprocess.call(['docker-compose', '../app_devel_build/docker_compose.yml'])
 
 
 if __name__ == "__main__":
