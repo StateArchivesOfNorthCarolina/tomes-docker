@@ -1,0 +1,47 @@
+version: '2'
+
+services:
+  main-client:
+    build: ../Services/convert_client
+    ports:
+    - 80:80
+    depends_on:
+    - pst-server
+    - darcmail-server
+    - ner-server
+    - corenlp-server
+    links:
+    - pst-server
+    - darcmail-server
+    - ner-server
+    - corenlp-server
+    volumes:
+    - /mnt/docker:/home/tomes/data
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /usr/local/bin/docker:/usr/bin/docker
+  pst-server:
+    build: ../Servers/pst_server
+    ports:
+    - 9000:9000
+    volumes:
+    - /mnt/docker:/home/tomes/data
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /usr/local/bin/docker:/usr/bin/docker
+  darcmail-server:
+    build: ../Servers/darcm_server
+    ports:
+    - 9001:9001
+    volumes:
+    - /mnt/docker:/home/tomes/data
+  ner-server:
+    build: ../Servers/tomes_server
+    ports:
+    - 9002:9002
+    volumes:
+    - /mnt/docker:/home/tomes/data
+  corenlp-server:
+    build: ../Servers/corenlp_server
+    ports:
+    - 9003:9003
+    volumes:
+    - /mnt/docker:/home/tomes/data

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}TOMES: Tag an EAXs file{% endblock %}
+
+{% block head %}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='elastic.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<form>
+    <div id="account_list">
+        <input type="file" id="flup" onchange="getfolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory />
+        <p/>
+        <div id="account_sel" style="visibility: hidden"></div>
+    </div>
+
+<div id="start_stop" style="visibility: hidden">
+    <p/>
+    <button id="start_elastic">Start Server</button>
+    <p/>
+    <button id="stop_elastic">Stop Server</button>
+    <p/>
+</div>
+    <div id="stdout">
+        <div id="message_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
+    </div>
+</form>
+{% endblock %}

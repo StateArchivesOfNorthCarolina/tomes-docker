@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  main-client:
+    build: ../Services/convert_client
+    ports:
+    - 80:80
+    depends_on:
+    - pst-server
+    - darcmail-server
+    - ner-server
+    - corenlp-server
+    links:
+    - pst-server
+    - darcmail-server
+    - ner-server
+    - corenlp-server
+  pst-server:
+    build: ../Servers/pst_server
+    ports:
+    - 9000:9000
+  darcmail-server:
+    build: ../Servers/darcm_server
+    ports:
+    - 9001:9001
+  ner-server:
+    build: ../Servers/tomes_server
+    ports:
+    - 9002:9002
+  corenlp-server:
+    build: ../Servers/corenlp_server
+    ports:
+    - 9003:9003

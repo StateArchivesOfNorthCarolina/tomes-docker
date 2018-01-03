@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}TOMES: Tag an EAXs file{% endblock %}
+
+{% block head %}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='nlp_convert.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<form>
+    EAXS file to transform:
+    <p/>
+    <div id="account_list">
+        <input type="file" id="file_select" onchange="getfile(event)" />
+        <p/>
+        <div id="account_sel" style="visibility: hidden"></div>
+    </div>
+    <p/>
+    Tagged Filename: <input id="tagged_name" type="text" size="40">
+    <p/>
+    <button id="btn_submit">Convert</button>
+
+    <p></p>
+    <div id="prog_bar" style="visibility: hidden">
+        <progress id="p"></progress>
+    </div>
+    <p/>
+    <div id="stdout">
+        <div id="progress_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
+    </div>
+</form>
+{% endblock %}

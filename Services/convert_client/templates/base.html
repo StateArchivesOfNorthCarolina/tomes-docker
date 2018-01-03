@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='zTreeStyle.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery.ztree.core.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='semantic.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='semantic.css') }}">
+    <title>{% block title %}{% endblock %} - TOMES</title>
+
+    {% endblock %}
+</head>
+<body>
+<div class="ui container" id="content">
+    <div class="ui large top menu">
+        <div class="ui container">
+            <a class="active item" href="{{url_for('do_main')}}">Main</a>
+            <a class="item" href="{{url_for('do_pst_convert')}}">Convert a PST</a>
+            <a class="item" href="{{url_for('do_darcmail_convert')}}">Convert to EAXS</a>
+            <a class="item" href="{{url_for('do_nlp_convert')}}">Tag EAXS</a>
+
+            <div class="right menu">
+                <div class="item">
+                    <a class="ui button">Documentation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pusher">
+        {% block content %}{% endblock %}
+    </div>
+
+</div>
+<div id="footer">
+    {% block footer %}
+    &copy; Copyright 2017 by <a href="https://www.ncdcr.gov/resources/records-management/tomes">Tomes Project</a>.
+    {% endblock %}
+</div>
+</body>
+</html>

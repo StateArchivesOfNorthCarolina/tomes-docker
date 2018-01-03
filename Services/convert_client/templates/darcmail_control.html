@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}TOMES: Darcmail Convert{% endblock %}
+
+{% block head %}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='dmc.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="pusher">
+    <div class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="eight wide column">
+                    <form>
+                    Mbox or Eml to transform:
+                    <p/>
+                    <div id="account_list">
+                        <input type="file" id="flup" onchange="getfolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory multiple />
+                        <p/>
+                        <div id="account_sel" style="visibility: hidden"></div>
+                    </div>
+                    <p/>
+                    Transfer Name: <input id="trans_name" type="text" size="40">
+                    <p/>
+                    Chunk the output: <input id="chunk" type="checkbox" checked> <input id="chunk_size" type="text" value="1000">
+                    <p/>
+                    Stitch chunks to finalize: <input id="stitch" type="checkbox" checked>
+                    <p/>
+                    Is this an eml structure?: <input id="from_eml" type="checkbox" checked>
+
+                    <p/>
+                    <button id="btn_submit">Convert</button>
+
+                    <p></p>
+                    <div id="prog_bar" style="visibility: hidden">
+                        <progress id="p"></progress>
+                    </div>
+                    <p/>
+                    <div id="stdout">
+                        <div id="progress_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

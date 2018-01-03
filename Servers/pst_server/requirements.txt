@@ -1,0 +1,2 @@
+Twisted==17.9.0
+autobahn==0.9.1

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}TOMES: Main{% endblock %}
+
+{% block content %}
+<!-- Page Contents -->
+
+    <div class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="eight wide column">
+                    <h3 class="ui header">TOMES (Transforming Online Mail with Embedded Semantics</h3>
+                    <p>
+                        Welcome to the TOMES application. From here you can:
+                    </p>
+                    <ul>
+                        <li>Convert PSTs to MBOX or EML: <sub>We recommend EML at the moment</sub></li>
+                        <li>Convert MBOXs or EMLs to EAXS (an XML representation of a Mailbox)</li>
+                        <li>Tag the EAXS with Named Entities</li>
+                        <li>Search the Tagged Mailbox</li>
+                    </ul>
+                    <p>
+                        You are not obligated to do all of these steps you. The TOMES app will output a fully documented
+                        AIP at every step.
+                    </p>
+                </div>
+                <div class="six wide right floated column">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row">
+                <div class="left aligned column">
+                    <h3 class="ui header">Technologies in TOMES</h3>
+                    <p>The TOMES app utilizes multiple technologies.  Below are a listing of the main software
+                        components:
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ui vertical stripe quote segment">
+        <div class="ui equal width stackable internally celled grid">
+
+            <div class="center aligned row">
+                <div class="column">
+                    <h2>Docker</h2>
+                </div>
+                <div class="left aligned column">
+                    <p>
+                        Docker is used to link all of the apps together and provide a simple setup and execution across
+                        platforms.
+                    </p>
+                </div>
+            </div>
+
+            <div class="center aligned row">
+                <div class="column">
+                    <h2>Readpst</h2>
+                </div>
+                <div class="left aligned column">
+                    <p>
+                        Readpst is a linux centric tool found in libpst.
+                    </p>
+                </div>
+            </div>
+
+            <div class="center aligned row">
+                <div class="column">
+                    <h2>DarcMail</h2>
+                </div>
+                <div class="left aligned column">
+                    <p>
+                        TOMES utilizes a fork of CmdDarcMailXML written by Carl Schaefer of the Smithsonian Institution.
+                    </p>
+                    <p>
+                        DarcMail converts a MBOX structure or an EML structure into EAXS xml.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="ui vertical stripe quote segment"></div>
+</div>
+{% endblock %}

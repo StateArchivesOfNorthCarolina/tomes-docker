@@ -1,0 +1,213 @@
+{
+  "id": "http://www.history.ncdcr.gov/SHRAB/ar/emailpreservation/mail-account/eaxs_schema.json",
+
+  "definitions": {
+    "folder-type": {
+      "type": "object",
+      "properties": {
+        "name":     {"type": "string"},
+        "message":  {"$ref": "#/definitions/message-type"},
+        "folder":   {"$ref": "#/definitions/folder-type"},
+        "mbox":     {"$ref": "#/definitions/mbox-type"}
+      },
+      "required": ["name"]
+    },
+
+    "message-type": {
+      "type": "object",
+      "properties": {
+        "rel_path":     {"type": "string"},
+        "local_id":     {"type": "number"},
+        "message_id":   {"type": "string"},
+        "mime_version": {"type": "string"},
+        "orig_date":    {"type": "string"},
+        "from":         {"type": "string"},
+        "sender":       {"type": "string"},
+        "to":           {"type": "string"},
+        "cc":           {"type": "string"},
+        "bcc":          {"type": "string"},
+        "in_reply_to":  {"type": "string"},
+        "references":   {"type": "string"},
+        "subject":      {"type": "string"},
+        "comments":     {"type": "string"},
+        "keywords":     {"type": "string"},
+        "header":       {"$ref": "#/definitions/header-type"},
+        "multi-body":    {"$ref": "#/definitions/multi-body-type"},
+        "single-body":   {"$ref": "#/definitions/single-body-type"},
+        "status_flag":  {"$ref": "#/definitions/message-status-flag"},
+        "incomplete":   {"$ref": "#/definitions/incomplete-parse-type"},
+        "eol":          {"$ref": "#/definitions/eol-type"},
+        "hash":         {"$ref": "#/definitions/hash-type"}
+      },
+      "required": ["local_id", "message_id", "eol"]
+    },
+
+    "single-body-type": {
+      "type": "object",
+      "properties": {
+        "content_type":               {"type": "string"},
+        "charset":                    {"type": "string"},
+        "content_name":               {"type": "string"},
+        "content_type_comments":      {"type": "string"},
+        "content_type_param":         {"$ref": "#/definitions/parameter-type"},
+        "transfer_encoding":          {"type": "string"},
+        "transfer_encoding_comments": {"type": "string"},
+        "content_id":                 {"type": "string"},
+        "content_id_comments":        {"type": "string"},
+        "description":                {"type": "string"},
+        "description_comments":       {"type": "string"},
+        "disposition":                {"type": "string"},
+        "disposition_file_name":      {"type": "string"},
+        "disposition_comments":       {"type": "string"},
+        "disposition_params":         {"$ref": "#/definitions/parameter-type"},
+        "other_mime_header":          {"$ref": "#/definitions/header-type"},
+        "phantom_body":               {"type": "string"}
+      }
+    },
+
+    "multi-body-type": {
+      "type": "object",
+      "properties": {
+        "content_type":         {"type": "string"},
+        "charset":              {"type": "string"},
+        "content_name":         {"type": "string"},
+        "boundary_string":      {"type": "string"},
+        "content_type_comments":      {"type": "string"},
+        "content_type_param":         {"$ref": "#/definitions/parameter-type"},
+        "transfer_encoding":          {"type": "string"},
+        "transfer_encoding_comments": {"type": "string"},
+        "content_id":                 {"type": "string"},
+        "content_id_comments":        {"type": "string"},
+        "description":                {"type": "string"},
+        "description_comments":       {"type": "string"},
+        "disposition":                {"type": "string"},
+        "disposition_file_name":      {"type": "string"},
+        "disposition_comments":       {"type": "string"},
+        "multi-body":    {"$ref": "#/definitions/multi-body-type"},
+        "single-body":   {"$ref": "#/definitions/single-body-type"},
+        "disposition_params":         {"$ref": "#/definitions/parameter-type"},
+        "other_mime_header":          {"$ref": "#/definitions/header-type"},
+        "preamble":                   {"type": "string"},
+        "epilogue":                   {"string": "string"}
+      },
+      "required": ["single-body", "multi-body"]
+    },
+
+    "child-message-type": {
+      "type": "object",
+      "properties": {
+        "local_id":           {"type": "number"},
+        "message_id":         {"type": "string"},
+        "mime_version":       {"type": "string"},
+        "orig_date":    {"type": "string"},
+        "from":         {"type": "string"},
+        "sender":       {"type": "string"},
+        "to":           {"type": "string"},
+        "cc":           {"type": "string"},
+        "bcc":          {"type": "string"},
+        "in_reply_to":  {"type": "string"},
+        "references":   {"type": "string"},
+        "subject":      {"type": "string"},
+        "comments":     {"type": "string"},
+        "keywords":     {"type": "string"},
+        "multi-body":    {"$ref": "#/definitions/multi-body-type"},
+        "single-body":   {"$ref": "#/definitions/single-body-type"},
+        "header":       {"$ref": "#/definitions/header-type"},
+        "incomplete":   {"$ref": "#/definitions/incomplete-parse-type"}
+      },
+      "required": ["header", "single-body", "multi-body"]
+    },
+
+    "ext-body-content-type": {
+      "type": "object",
+      "properties": {
+        "rel_path":           {"type": "string"},
+        "charset":            {"type": "string"},
+        "transfer_encoding":  {"type": "string"},
+        "local_id":           {"type": "number"},
+        "xml_wrapped":        {"type": "boolean"},
+        "eol":                {"$ref": "#/definitions/eol-type"},
+        "hash":               {"$ref": "#/definitions/hash-type"}
+      },
+      "required": ["rel_path", "local_id"]
+    },
+
+    "hash-type": {
+      "type": "object",
+      "properties": {
+        "value": {"type": "string"},
+        "function": {"enum": ["MD5", "WHIRLPOOL", "SHA1", "SHA256", "SHA384", "SHA512", "RIPEMD160"]}
+      },
+      "required": ["value", "function"]
+    },
+
+    "header-type": {
+      "type": "object",
+      "properties": {
+        "name":     {"type": "string"},
+        "value":    {"type": "string"},
+        "comments": {"type": "string"}
+      },
+      "required": ["name", "value"]
+    },
+
+    "incomplete-parse-type": {
+      "type": "object",
+      "properties": {
+        "error_type":     {"type": "string"},
+        "error_location": {"type": "string"}
+      },
+      "required": ["error_type"]
+    },
+
+    "int-body-content-type": {
+      "type": "object",
+      "properties": {
+        "content":            {"type": "string"},
+        "charset":            {"type": "string"},
+        "transfer_encoding":  {"type": "string"}
+      },
+      "required": ["content"]
+    },
+
+    "mbox-type": {
+      "type": "object",
+      "properties": {
+        "rel_path": {"type": "string"},
+        "eol":      {"enum": ["CR", "LF", "CRLF"]},
+        "hash":     {"$ref": "#/definitions/hash-type"}
+      },
+      "required": ["rel_path", "eol"]
+    },
+
+    "parameter-type": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "value": {"type": "string"}
+      },
+      "required": ["name", "value"]
+    },
+
+    "ref-account-type": {
+      "type": "object",
+      "properties": {
+        "href":           {"type": "string"},
+        "email_address":  {"type": "string"},
+        "ref_type":       {"enum": ["previous-content", "subsequent-content", "supplemental", "see-also", "see-instead"]}
+      },
+      "required": ["href", "ref_type"]
+    }
+
+    },
+
+  "type": "object",
+  "properties": {
+    "email_address": 		{"type": "string"},
+    "global_id":	 		{"type": "string"},
+    "references_account":	{"$ref": "#/definitions/ref-account-type"},
+    "folder":				{"$ref": "#/definitions/folder"}
+  },
+  "required": ["global_id"]
+
+}
