@@ -37,7 +37,7 @@
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
+thumbs.db
 Thumbs.db
 
 # Directories #
@@ -51,4 +51,6 @@ Thumbs.db
 ##################
 package-lock.json
 semantic.json
+.gitignore
+.gitmodules
 *.1
