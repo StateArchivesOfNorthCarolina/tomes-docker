@@ -16,7 +16,7 @@ services:
     - ner-server
     - corenlp-server
     volumes:
-    - /mnt/docker:/home/tomes/data
+    - /mnt/data:/home/tomes/data
     - /var/run/docker.sock:/var/run/docker.sock
     - /usr/local/bin/docker:/usr/bin/docker
   pst-server:
@@ -24,7 +24,7 @@ services:
     ports:
     - 9000:9000
     volumes:
-    - /mnt/docker:/home/tomes/data
+    - /mnt/data:/home/tomes/data
     - /var/run/docker.sock:/var/run/docker.sock
     - /usr/local/bin/docker:/usr/bin/docker
   darcmail-server:
@@ -32,16 +32,16 @@ services:
     ports:
     - 9001:9001
     volumes:
-    - /mnt/docker:/home/tomes/data
+    - /mnt/data:/home/tomes/data
   ner-server:
     build: ../Servers/tomes_server
     ports:
     - 9002:9002
     volumes:
-    - /mnt/docker:/home/tomes/data
+    - /mnt/data:/home/tomes/data
   corenlp-server:
     build: ../Servers/corenlp_server
     ports:
     - 9003:9003
     volumes:
-    - /mnt/docker:/home/tomes/data
+    - /mnt/data:/home/tomes/data

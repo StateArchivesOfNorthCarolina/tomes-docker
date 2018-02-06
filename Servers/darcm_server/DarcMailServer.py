@@ -8,7 +8,6 @@ from threading import Thread
 from twisted.python import log
 from twisted.internet import reactor
 
-TOMES_HOME = os.environ["TOMES_HOME"]
 
 class DarcMailConvert(WebSocketServerProtocol):
     def __init__(self):
@@ -16,14 +15,13 @@ class DarcMailConvert(WebSocketServerProtocol):
         self.server_name = "DarcMailConverter"
         self.on_posix = 'posix' in sys.builtin_module_names
         self.cur_folder = None
-        self.no_sub = None
         self.stitch = None
         self.chunk = None
         self.chunk_size = None
         self.from_eml = None
         self.transfer_name = None
         self.build_opts = []
-        self.production = False
+        self.production = True
         if self.production:
             self.dm_exec = '/usr/src/app/docker_dmc/DarcMailCLI.py'
             self.base_package_location = "/home/tomes/data"
@@ -46,7 +44,6 @@ class DarcMailConvert(WebSocketServerProtocol):
         else:
             if payload['o'] == 1:
                 self.cur_folder = payload['data']['fldr']
-                self.no_sub = payload['data']['no_sub']
                 self.stitch = payload['data']['stitch']
                 self.chunk = payload['data']['chunk']
                 self.chunk_size = payload['data']['chunk_size']
@@ -109,8 +106,6 @@ class DarcMailConvert(WebSocketServerProtocol):
             # Requested Structure is EML
             self.build_opts.append('-fe')
 
-        if self.no_sub:
-            self.build_opts.append('-n')
         # END OPTIONS
 
         for i in range(len(self.build_opts)):

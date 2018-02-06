@@ -391,7 +391,7 @@ class BuildEmlDarcmail(object):
 
 
 if __name__ == "__main__":
-    CommonMethods.set_devel(True)
+    CommonMethods.set_devel(False)
     dmcli = DarcMailCLI()
 
     if dmcli.eml_struct:

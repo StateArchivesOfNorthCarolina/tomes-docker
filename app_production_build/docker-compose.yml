@@ -1,12 +1,8 @@
-version: '3'
+version: '2'
 
 services:
   main-client:
-    build: ../Services/convert_client
-    volumes:
-    - /mnt/data:/home/tomes/data
-    - /var/run/docker.sock:/var/run/docker.sock
-    - /usr/local/bin/docker:/usr/bin/docker
+    image: govsanc/main-client
     ports:
     - 80:80
     depends_on:
@@ -19,35 +15,33 @@ services:
     - darcmail-server
     - ner-server
     - corenlp-server
-    environment:
-    - TOMES_HOME=/mnt/data
-  pst-server:
-    build: ../Servers/pst_server
     volumes:
     - /mnt/data:/home/tomes/data
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /usr/local/bin/docker:/usr/bin/docker
+  pst-server:
+    image: govsanc/pst-server
     ports:
     - 9000:9000
-    environment:
-    - TOMES_HOME=/mnt/data
-  darcmail-server:
-    build: ../Servers/darcm_server
     volumes:
     - /mnt/data:/home/tomes/data
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /usr/local/bin/docker:/usr/bin/docker
+  darcmail-server:
+    image: govsanc/darcmail-server
     ports:
     - 9001:9001
-    environment:
-    - TOMES_HOME=/mnt/data
-  ner-server:
-    build: ../Servers/tomes_server
     volumes:
     - /mnt/data:/home/tomes/data
+  ner-server:
+    image: govsanc/ner-server
     ports:
     - 9002:9002
-    environment:
-    - TOMES_HOME=/mnt/data
+    volumes:
+    - /mnt/data:/home/tomes/data
   corenlp-server:
-    build: ../Servers/corenlp_server
+    image: govsanc/corenlp-server
     ports:
     - 9003:9003
-    environment:
-    - TOMES_HOME=/mnt/data
+    volumes:
+    - /mnt/data:/home/tomes/data

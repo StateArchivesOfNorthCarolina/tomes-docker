@@ -75,7 +75,7 @@ class PstConvert(WebSocketServerProtocol):
         pst_acc_name = pst['acc_name']
         p = subprocess.Popen(['docker', 'run',
                               '-v', '/mnt/data:/home/tomes/data',
-                              '-t', 'tomes-pst-converter',
+                              '-t', 'govsanc/pst-extractor',
                               pst_file,
                               pst_acc_name],
                              stdout=subprocess.PIPE, bufsize=1, close_fds=self.on_posix)
