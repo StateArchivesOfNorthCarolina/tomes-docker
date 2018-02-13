@@ -7,26 +7,42 @@
 {% endblock %}
 
 {% block content %}
-<form>
-    EAXS file to transform:
-    <p/>
-    <div id="account_list">
-        <input type="file" id="file_select" onchange="getfile(event)" />
-        <p/>
-        <div id="account_sel" style="visibility: hidden"></div>
+<div class="ui left aligned stackable grid container">
+    <div class="row">
+        <div class="ten wide column">
+            EAXS file to transform:
+            <p/>
+            <div id="account_list" class="ztree"></div>
+            <p/>
+        </div>
     </div>
-    <p/>
-    Tagged Filename: <input id="tagged_name" type="text" size="40">
-    <p/>
-    <button id="btn_submit">Convert</button>
+    <div class="row">
+        <div class="ten wide column">
+            <div class="ui form">
+                <div class="field">
+                    <label>EAXS Selected</label>
+                    <input id="selected_name" type="text" name="selected-name">
+                </div>
+                <div class="field">
+                    <label>Tagged Name</label>
+                    <input id="tagged_name" type="text" name="tagged-name">
+                </div>
+                <button class="ui button" type="submit">Convert</button>
+            </div>
+        </div>
+    </div>
 
-    <p></p>
-    <div id="prog_bar" style="visibility: hidden">
-        <progress id="p"></progress>
+    <div class="row">
+        <div class="ten wide column">
+            <div id="prog_bar" style="visibility: hidden">
+                <progress id="p"></progress>
+            </div>
+            <p/>
+            <div id="stdout">
+                <div id="progress_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
+            </div>
+        </div>
     </div>
-    <p/>
-    <div id="stdout">
-        <div id="progress_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
-    </div>
-</form>
+</div>
+
 {% endblock %}

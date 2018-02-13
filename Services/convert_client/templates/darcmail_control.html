@@ -12,24 +12,52 @@
         <div class="ui middle aligned stackable grid container">
             <div class="row">
                 <div class="eight wide column">
+                    Select a directory containing Mime Emails to transform.
+                    <p/>
+                    <div id="treeDemo" class="ztree"></div>
+                    <p/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="eight wide column">
                     <form>
-                    Mbox or Eml to transform:
-                    <p/>
-                    <div id="account_list">
-                        <input type="file" id="flup" onchange="getfolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory multiple />
-                        <p/>
-                        <div id="account_sel" style="visibility: hidden"></div>
-                    </div>
-                    <p/>
-                    Transfer Name: <input id="trans_name" type="text" size="40">
-                    <p/>
-                    Chunk the output: <input id="chunk" type="checkbox" checked> <input id="chunk_size" type="text" value="1000">
-                    <p/>
-                    Stitch chunks to finalize: <input id="stitch" type="checkbox" checked>
-                    <p/>
-                    Is this an eml structure?: <input id="from_eml" type="checkbox" checked>
+                        <div class="ui equal width stackable grid">
+                            <div class="right aligned row">
+                                <div class="column">
+                                    Transfer Name:
+                                </div>
+                                <div class="left aligned column">
+                                    <input id="trans_name" type="text" size="40">
+                                </div>
+                            </div>
 
-                    <p/>
+                            <div class="right aligned row">
+                                <div class="column">
+                                    Chunk the output:
+                                </div>
+                                <div class="left aligned column">
+                                    <input id="chunk_size" type="text" size="8" value="1000"><br>
+                                    <input id="chunk" type="checkbox" checked>
+                                </div>
+                            </div>
+                            <div class="right aligned row">
+                                <div class="column">
+                                    Stitch chunks to finalize:
+                                </div>
+                                <div class="left aligned column">
+                                    <input id="stitch" type="checkbox" checked>
+                                </div>
+                            </div>
+                            <div class="right aligned row">
+                                <div class="column">
+                                    Is this an eml structure?:
+                                </div>
+                                <div class="left aligned column">
+                                    <input id="from_eml" type="checkbox" checked>
+                                </div>
+                            </div>
+                        </div>
+
                     <button id="btn_submit">Convert</button>
 
                     <p></p>

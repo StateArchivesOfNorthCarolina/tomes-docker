@@ -1,14 +1,38 @@
-const SEND_PACKAGE = 1;
-const STD_OUT = 2;
-const PROG_ON = 3;
-const PROG_OFF = 4;
-const SUG_NAME = 5;
+/*
+File: dmc.js
+Author: Jeremy M. Gibson <jeremy.gibson@ncdcr.gov>
+Description:
+
+Controls the processes for the darcmail-server module of the TOMES project
+
+ */
+const GET_LIST = 1;
+const SEND_PACKAGE = 2;
+const STD_OUT = 3;
+const PROG_ON = 4;
+const PROG_OFF = 5;
+const SUG_NAME = 6;
 const SOURCE_BROWSER = window.location.host;
 const SERVER_LOCATION = SOURCE_BROWSER + ":9001";
 var connect_s;
 var folder;
 var account_selected;
 var line_buffer = 0;
+
+/*
+ the setting variable is used to initialize the ztree object
+ */
+var setting = {
+    data: {
+        simpleData: {
+            enable: false
+        }
+    },
+
+    callback: {
+        onClick: handleMimeFolder
+    }
+};
 
 window.onload = function() {
     try {
@@ -25,6 +49,12 @@ window.onload = function() {
 
 $(document).ready(function () {
     $(function(){
+        $("#main_menu").each(function () {
+            $(this).find("a.item.active").removeClass("active");
+        });
+
+        $("#darcmail_convert").addClass("active");
+
         $("#mbox_dir").change(function (e) {
             var theFiles = this.files;
             var relativePath = theFiles[0].webkitRelativePath;
@@ -55,6 +85,10 @@ function submit_opts() {
 
 function message_router(type, payload) {
     switch (type) {
+        case(GET_LIST):
+            var nodes = JSON.parse(payload);
+            $.fn.zTree.init($("#treeDemo"), setting, nodes);
+            break;
         case(SEND_PACKAGE):
             generate_table(payload);
             break;
@@ -67,10 +101,14 @@ function message_router(type, payload) {
         case(PROG_OFF):
             set_prog_off();
             break;
-        case(SUG_NAME):
-            set_suggested(payload);
-            break;
     }
+}
+
+function handleMimeFolder(event, treeId, treeNode) {
+    var mime_directory = treeNode.name;
+    account_selected = mime_directory;
+    $("#trans_name").val(account_selected.toString());
+    return false;
 }
 
 function write_to_stdout(payload) {
@@ -90,6 +128,8 @@ function set_prog_on() {
 
 function set_prog_off() {
     $("#prog_bar").css("visibility", "hidden");
+    $("#progress_from_server").html('');
+    $("#progress_from_server").html('<h4>Complete!</h4>');
 }
 
 function set_suggested(sug) {
@@ -98,17 +138,4 @@ function set_suggested(sug) {
 
 function to_jsn(o, s) {
     return JSON.stringify({"o": o, "data": s});
-}
-
-function getfolder(e) {
-    var files = e.target.files;
-    var path = files[0].webkitRelativePath;
-    account_selected = path.split("/")[0];
-    $("#account_sel").html("Account Selected: <strong>"+ account_selected +"</strong>");
-    $("#account_sel").css('visibility', 'visible');
-    //Return false keeps the Websocket from reseting.
-
-    //Suggest a TransferName
-    connect_s.send(to_jsn(5, {fldr: account_selected}));
-    return false;
 }

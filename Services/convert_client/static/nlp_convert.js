@@ -1,7 +1,17 @@
+/*
+File: nlp_convert.js
+Author: Jeremy M. Gibson <jeremy.gibson@ncdcr.gov>
+Description:
+
+Controls the processes for the tomes_server module of the TOMES project
+
+ */
+
 //CONTROL CODES
 const RECV_STD_OUT = 1;
 const RECV_PROG_ON = 2;
 const RECV_PROG_OFF = 3;
+const RECV_FILE_LIST = 5;
 //END_CONTROL_CODES
 
 //OUTGOING/INCOMING CODES
@@ -12,6 +22,21 @@ const SERVER_LOCATION = SOURCE_BROWSER + ":9002";
 var connect_s;
 var account_selected;
 var line_buffer = 0;
+
+/*
+ the setting variable is used to initialize the ztree object
+ */
+var setting = {
+    data: {
+        simpleData: {
+            enable: false
+        }
+    },
+
+    callback: {
+        onClick: handleEaxsAccount
+    }
+};
 
 window.onload = function() {
     try {
@@ -28,7 +53,7 @@ window.onload = function() {
 
 $(document).ready(function () {
     $(function(){
-        $("#mbox_dir").change(function (e) {
+        $("#account_list").change(function (e) {
             var theFiles = this.files;
             var relativePath = theFiles[0].webkitRelativePath;
             folder = relativePath.split("/");
@@ -39,6 +64,12 @@ $(document).ready(function () {
             connect_s.send($jsn);
             return false;
         });
+
+        $("#main_menu").each(function () {
+            $(this).find("a.item.active").removeClass("active");
+        });
+
+        $("#nlp_convert").addClass("active");
 
     });
 });
@@ -53,6 +84,10 @@ function submit_opts() {
 
 function message_router(type, payload) {
     switch (type) {
+        case(RECV_FILE_LIST):
+            nodes = JSON.parse(payload);
+            $.fn.zTree.init($("#account_list"), setting, nodes);
+            break;
         case(RECV_STD_OUT):
             write_to_stdout(payload);
             break;
@@ -63,6 +98,16 @@ function message_router(type, payload) {
             set_prog_off();
             break;
     }
+}
+
+function handleEaxsAccount(event, treeId, treeNode) {
+    var account_file = treeNode.name;
+    account_selected = account_file;
+    account_file = account_file.split(".")[0];
+    $("#selected_name").val(account_selected.toString());
+    $("#tagged_name").val(account_file + "_tagged.xml");
+    set_suggested();
+    return false;
 }
 
 function write_to_stdout(payload) {
@@ -82,24 +127,15 @@ function set_prog_on() {
 
 function set_prog_off() {
     $("#prog_bar").css("visibility", "hidden");
+    $("#progress_from_server").html('');
+    $("#progress_from_server").html('<h4>Complete!</h4>');
 }
 
 function set_suggested(sug) {
-    $("#trans_name").val(sug.toLowerCase());
+    var s = sug.split(".");
+    $("#trans_name").val(sug[0].toLowerCase()+"_tagged");
 }
 
 function to_jsn(o, s) {
     return JSON.stringify({"o": o, "data": s});
-}
-
-function getfile(e) {
-    var files = e.target.files;
-    account_selected = files[0].name;
-    $("#account_sel").html("EAXS Selected: <strong>"+ account_selected +"</strong>");
-    $("#account_sel").css('visibility', 'visible');
-    //Return false keeps the Websocket from reseting.
-
-    //Suggest a TransferName
-    //connect_s.send(to_jsn(5, {eaxs_file: account_selected}));
-    return false;
 }

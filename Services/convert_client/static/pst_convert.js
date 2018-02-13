@@ -1,3 +1,11 @@
+/*
+File: pst_convert.js
+Author: Jeremy M. Gibson <jeremy.gibson@ncdcr.gov>
+Description:
+
+Controls the processes for the pst-server module of the TOMES project
+
+ */
 const GET_LIST = 1;
 const SEND_PACKAGE = 2;
 const PROG_ON = 3;
@@ -7,6 +15,9 @@ const SOURCE_BROWSER = window.location.host;
 const SERVER_LOCATION = SOURCE_BROWSER + ":9000";
 var connect_s;
 var line_buffer = 0;
+/*
+ the setting variable is used to initialize the ztree object
+ */
 var setting = {
     data: {
         simpleData: {
@@ -36,6 +47,12 @@ $(document).ready(function () {
         connect_s.send(submit_opts());
         return false;
     });
+
+    $("#main_menu").each(function () {
+        $(this).find("a.item.active").removeClass("active");
+    });
+
+    $("#pst_convert").addClass("active");
 
 });
 
@@ -74,6 +91,8 @@ function set_prog_on() {
 
 function set_prog_off() {
     $("#prog_bar").css("visibility", "hidden");
+    $("#progress_from_server").html('');
+    $("#progress_from_server").html('<h4>Complete!</h4>');
 }
 
 function submit_opts() {

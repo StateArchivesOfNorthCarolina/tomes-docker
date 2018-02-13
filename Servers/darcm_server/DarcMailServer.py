@@ -10,6 +10,11 @@ from twisted.internet import reactor
 
 
 class DarcMailConvert(WebSocketServerProtocol):
+    WS_FOLDER_LIST = 1
+    WS_PROG_ON = 3
+    WS_PROG_OFF = 4
+    WS_SEND = 5
+
     def __init__(self):
         super().__init__()
         self.server_name = "DarcMailConverter"
@@ -22,12 +27,13 @@ class DarcMailConvert(WebSocketServerProtocol):
         self.transfer_name = None
         self.build_opts = []
         self.production = True
+        self.file_tree = []
         if self.production:
             self.dm_exec = '/usr/src/app/docker_dmc/DarcMailCLI.py'
             self.base_package_location = "/home/tomes/data"
         else:
             self.dm_exec = 'D:\\Development\\Python\\DockerComposeStruct\\devel\\tomes_docker_app\\Servers\\darcm_server\\docker_dmc\\DarcMailCLI.py'
-            self.base_package_location = 'E:\\RESOURCES\\TEST_RESOURCES\\tomes\\data'
+            self.base_package_location = 'E:\\RESOURCES\\TEST_RESOURCES\\tomes\\data\\mboxes'
 
     def onConnect(self, request):
         print("{}: Connected".format(self.server_name))
@@ -35,7 +41,17 @@ class DarcMailConvert(WebSocketServerProtocol):
         return None, headers
 
     def onOpen(self):
-        self.sendMessage(self.get_message_for_sending(2, 'Client connected!'))
+        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_SEND, 'Client connected!'))
+        s = self._get_folder_tree()
+        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_FOLDER_LIST, s))
+
+    def _get_folder_tree(self):
+        children = os.listdir(os.path.join(self.base_package_location, 'mboxes'))
+        nc = []
+        for c in children:
+            nc.append({'name': c})
+        self.file_tree.append({'name': "Mime Sources", 'children': nc})
+        return json.dumps(self.file_tree)
 
     def onMessage(self, payload, isBinary):
         payload = json.loads(bytes.decode(payload, encoding='utf-8'))

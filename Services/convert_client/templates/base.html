@@ -14,11 +14,11 @@
 <body>
 <div class="ui container" id="content">
     <div class="ui large top menu">
-        <div class="ui container">
-            <a class="active item" href="{{url_for('do_main')}}">Main</a>
-            <a class="item" href="{{url_for('do_pst_convert')}}">Convert a PST</a>
-            <a class="item" href="{{url_for('do_darcmail_convert')}}">Convert to EAXS</a>
-            <a class="item" href="{{url_for('do_nlp_convert')}}">Tag EAXS</a>
+        <div id="main_menu" class="ui container">
+            <a id="home_tab" class="item active" href="{{url_for('do_main')}}">Main</a>
+            <a id="pst_convert" class="item" href="{{url_for('do_pst_convert')}}">Convert a PST</a>
+            <a id="darcmail_convert" class="item" href="{{url_for('do_darcmail_convert')}}">Convert to EAXS</a>
+            <a id="nlp_convert" class="item" href="{{url_for('do_nlp_convert')}}">Tag EAXS</a>
 
             <div class="right menu">
                 <div class="item">

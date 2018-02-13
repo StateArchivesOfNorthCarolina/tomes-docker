@@ -16,6 +16,7 @@ class TomesToolConvert(WebSocketServerProtocol):
     SEND_PROG_ON = 2
     SEND_PROG_OFF = 3
 
+    SEND_FOLDER_LIST = 5
     RECV_FILE_PACK = 4
     p = platform
 
@@ -29,19 +30,35 @@ class TomesToolConvert(WebSocketServerProtocol):
         self.eaxs_file_name = None
         self.eaxs_file = None
         self.output_file_name = None
+        self.server_name = "NER Server"
+        self.file_tree = []
+        self.presented_names = {}
 
         if self.production:
-            self.eaxs_base = os.path.abspath("/home/tomes/data/eaxs")
+            self.eaxs_base = "/home/tomes/data/eaxs"
         else:
-            self.eaxs_base = "E:\RESOURCES\TEST_RESOURCES\\tomes\data\eaxs"
+            self.eaxs_base = "E:\\RESOURCES\\TEST_RESOURCES\\tomes\\data\\eaxs"
 
     def onConnect(self, request):
-        print("In Connect")
+        print("{}: Connected".format(self.server_name))
         headers = {'Access-Control-Allow-Origin': '*'}
         return None, headers
 
     def onOpen(self):
-        print('Client connected!')
+        self.sendMessage(self.get_message_for_sending(TomesToolConvert.SEND_STD_OUT, "Client Connected"))
+        s = self._get_folder_tree()
+        self.sendMessage(self.get_message_for_sending(TomesToolConvert.SEND_FOLDER_LIST, s))
+
+    def _get_folder_tree(self):
+        children = []
+        for root, dirs, files in os.walk(self.eaxs_base):
+            if os.path.basename(root) == "eaxs_xml":
+                for f in files:
+                    if f.endswith(".xml") and not str(f).__contains__("tagged"):
+                        children.append({'name': f})
+                        self.presented_names[f] = os.path.join(root, f)
+        self.file_tree.append({'name': "EAXS", 'children': children})
+        return json.dumps(self.file_tree)
 
     def enqueue_out(self, out, queue):
         for line in iter(out.readline, b''):
@@ -53,7 +70,7 @@ class TomesToolConvert(WebSocketServerProtocol):
         return l.encode('utf-8')
 
     def onClose(self, wasClean, code, reason):
-        print("WebSocket connection closed: {0}".format(reason))
+        print("WebSocket connection closed: {} : {} : {}".format(wasClean, code, reason))
 
     def onMessage(self, payload, isBinary):
         payload = json.loads(bytes.decode(payload, encoding='utf-8'))
