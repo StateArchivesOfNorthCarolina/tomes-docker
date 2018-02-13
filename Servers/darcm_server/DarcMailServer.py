@@ -11,9 +11,10 @@ from twisted.internet import reactor
 
 class DarcMailConvert(WebSocketServerProtocol):
     WS_FOLDER_LIST = 1
-    WS_PROG_ON = 3
-    WS_PROG_OFF = 4
-    WS_SEND = 5
+    WS_RECV_PACKAGE = 2
+    WS_PROG_ON = 4
+    WS_PROG_OFF = 5
+    WS_SEND = 3
 
     def __init__(self):
         super().__init__()
@@ -33,7 +34,7 @@ class DarcMailConvert(WebSocketServerProtocol):
             self.base_package_location = "/home/tomes/data"
         else:
             self.dm_exec = 'D:\\Development\\Python\\DockerComposeStruct\\devel\\tomes_docker_app\\Servers\\darcm_server\\docker_dmc\\DarcMailCLI.py'
-            self.base_package_location = 'E:\\RESOURCES\\TEST_RESOURCES\\tomes\\data\\mboxes'
+            self.base_package_location = 'E:\\RESOURCES\\TEST_RESOURCES\\tomes\\data'
 
     def onConnect(self, request):
         print("{}: Connected".format(self.server_name))
@@ -41,9 +42,9 @@ class DarcMailConvert(WebSocketServerProtocol):
         return None, headers
 
     def onOpen(self):
-        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_SEND, 'Client connected!'))
         s = self._get_folder_tree()
         self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_FOLDER_LIST, s))
+        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_SEND, 'Client connected!'))
 
     def _get_folder_tree(self):
         children = os.listdir(os.path.join(self.base_package_location, 'mboxes'))
@@ -58,7 +59,7 @@ class DarcMailConvert(WebSocketServerProtocol):
         if isBinary:
             pass
         else:
-            if payload['o'] == 1:
+            if payload['o'] == DarcMailConvert.WS_RECV_PACKAGE:
                 self.cur_folder = payload['data']['fldr']
                 self.stitch = payload['data']['stitch']
                 self.chunk = payload['data']['chunk']
@@ -137,19 +138,14 @@ class DarcMailConvert(WebSocketServerProtocol):
         return l.encode('utf-8')
 
     def convert(self):
-        if self.production:
-            p = subprocess.Popen(self.build_opts,
-                                 stdout=subprocess.PIPE, bufsize=1, close_fds=self.on_posix)
-        else:
-            p = subprocess.Popen(self.build_opts,
-                                 stdout=subprocess.PIPE, bufsize=1, close_fds=self.on_posix)
+        p = subprocess.Popen(self.build_opts, stdout=subprocess.PIPE, bufsize=1, close_fds=self.on_posix)
         q = Queue()
         t = Thread(target=self.enqueue_out, args=(p.stdout, q))
         t.daemon = True
-        self.sendMessage(self.get_message_for_sending(2, "Processing: {}".format(self.cur_folder)))
+        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_SEND, "Processing: {}".format(self.cur_folder)))
         t.start()
         line = None
-        self.sendMessage(self.get_message_for_sending(3, ''))
+        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_PROG_ON, ''))
         while t.is_alive():
             try:
                 # Wait for a line to be generated.
@@ -159,11 +155,11 @@ class DarcMailConvert(WebSocketServerProtocol):
                 pass
             else:
                 l = bytes.decode(line, encoding='utf-8')
-                sender = json.dumps({'router': 2, 'data': l.strip()})
+                sender = json.dumps({'router': DarcMailConvert.WS_SEND, 'data': l.strip()})
                 self.sendMessage(sender.encode('utf-8'))
 
-        self.sendMessage(self.get_message_for_sending(2, "Complete"))
-        self.sendMessage(self.get_message_for_sending(4, ''))
+        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_SEND, "Complete"))
+        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_PROG_OFF, ''))
 
 
 if __name__ == "__main__":

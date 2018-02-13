@@ -54,6 +54,14 @@ $(document).ready(function () {
 
     $("#pst_convert").addClass("active");
 
+    $('.ui.progress').toggle('visible')
+        .progress({
+            duration : 0,
+            total    : 100,
+            value: 99,
+            autoSuccess: false
+        });
+
 });
 
 function message_router(type, payload) {

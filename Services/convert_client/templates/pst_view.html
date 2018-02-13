@@ -7,19 +7,38 @@
 {% endblock %}
 
 {% block content %}
+<div class="push">
+    <div class="ui left aligned stackable grid container">
+        <div class="row">
+            <div class="eight wide column">
+                Select a PST to convert to mime email.
+                <p/>
+                <div id="treeDemo" class="ztree"></div>
+                <p/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight wide column">
+                <div class="ui form">
+                    <div class="eight wide field">
+                        <label>Output Mime-type folder: </label>
+                        <input type="text" id="account_name" name="account-name">
+                    </div>
+                    <button class="ui button" id="btn_submit" type="submit">Convert</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight wide column">
+                <div id="prog_bar" class="ui green progress" style="visibility: hidden">
+                    <div id="p" class="bar"></div>
+                </div>
+                <div id="stdout">
+                    <div id="progress_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div id="treeDemo" class="ztree"></div>
-
-<p></p>
-<p>Suggested name of output folder: <input type="text" id="account_name" size="40"></p>
-<p><button id="btn_submit">Convert</button></p>
-<div id="prog_bar" style="visibility: hidden">
-    <progress id="p"></progress>
-</div>
-
-
-
-<div id="stdout">
-    <div id="progress_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
-</div>
 {% endblock %}
+</div>

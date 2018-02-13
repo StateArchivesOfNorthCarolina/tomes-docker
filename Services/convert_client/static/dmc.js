@@ -11,7 +11,6 @@ const SEND_PACKAGE = 2;
 const STD_OUT = 3;
 const PROG_ON = 4;
 const PROG_OFF = 5;
-const SUG_NAME = 6;
 const SOURCE_BROWSER = window.location.host;
 const SERVER_LOCATION = SOURCE_BROWSER + ":9001";
 var connect_s;
@@ -67,6 +66,16 @@ $(document).ready(function () {
             return false;
         });
 
+        $('.ui.checkbox')
+            .checkbox();
+
+        $('.ui.progress')
+            .progress({
+                duration : 0,
+                total    : 100,
+                value: 99,
+                autoSuccess: false
+            });
     });
 });
 
@@ -128,7 +137,7 @@ function set_prog_on() {
 
 function set_prog_off() {
     $("#prog_bar").css("visibility", "hidden");
-    $("#progress_from_server").html('');
+    //$("#progress_from_server").html('');
     $("#progress_from_server").html('<h4>Complete!</h4>');
 }
 

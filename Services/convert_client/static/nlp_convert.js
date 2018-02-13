@@ -106,7 +106,6 @@ function handleEaxsAccount(event, treeId, treeNode) {
     account_file = account_file.split(".")[0];
     $("#selected_name").val(account_selected.toString());
     $("#tagged_name").val(account_file + "_tagged.xml");
-    set_suggested();
     return false;
 }
 
@@ -129,11 +128,6 @@ function set_prog_off() {
     $("#prog_bar").css("visibility", "hidden");
     $("#progress_from_server").html('');
     $("#progress_from_server").html('<h4>Complete!</h4>');
-}
-
-function set_suggested(sug) {
-    var s = sug.split(".");
-    $("#trans_name").val(sug[0].toLowerCase()+"_tagged");
 }
 
 function to_jsn(o, s) {

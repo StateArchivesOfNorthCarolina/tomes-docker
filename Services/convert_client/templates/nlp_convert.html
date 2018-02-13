@@ -27,22 +27,21 @@
                     <label>Tagged Name</label>
                     <input id="tagged_name" type="text" name="tagged-name">
                 </div>
-                <button class="ui button" type="submit">Convert</button>
+                <button id="btn_submit" class="ui button" type="submit">Convert</button>
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="ten wide column">
-            <div id="prog_bar" style="visibility: hidden">
-                <progress id="p"></progress>
+            <div id="prog_bar" class="ui green progress" style="visibility: hidden">
+                <div id="p" class="bar"></div>
             </div>
-            <p/>
             <div id="stdout">
                 <div id="progress_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
+</div>

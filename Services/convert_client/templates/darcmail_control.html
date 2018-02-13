@@ -7,9 +7,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="pusher">
-    <div class="ui vertical stripe segment">
-        <div class="ui middle aligned stackable grid container">
+<div class="push">
+    <div class="ui left aligned stackable grid container">
             <div class="row">
                 <div class="eight wide column">
                     Select a directory containing Mime Emails to transform.
@@ -20,58 +19,45 @@
             </div>
             <div class="row">
                 <div class="eight wide column">
-                    <form>
-                        <div class="ui equal width stackable grid">
-                            <div class="right aligned row">
-                                <div class="column">
-                                    Transfer Name:
-                                </div>
-                                <div class="left aligned column">
-                                    <input id="trans_name" type="text" size="40">
-                                </div>
+                    <div class="ui form">
+                        <div class="six wide field">
+                            <label>Transfer Name: </label>
+                            <input id="trans_name" type="text" name="trans-name">
+                        </div>
+                        <div class="inline field">
+                            <div class="ui toggle checkbox">
+                                <input id="chunk" type="checkbox" tabindex="0" class="hidden" checked="checked">
+                                <label>Chunk output?</label>
                             </div>
-
-                            <div class="right aligned row">
-                                <div class="column">
-                                    Chunk the output:
-                                </div>
-                                <div class="left aligned column">
-                                    <input id="chunk_size" type="text" size="8" value="1000"><br>
-                                    <input id="chunk" type="checkbox" checked>
-                                </div>
-                            </div>
-                            <div class="right aligned row">
-                                <div class="column">
-                                    Stitch chunks to finalize:
-                                </div>
-                                <div class="left aligned column">
-                                    <input id="stitch" type="checkbox" checked>
-                                </div>
-                            </div>
-                            <div class="right aligned row">
-                                <div class="column">
-                                    Is this an eml structure?:
-                                </div>
-                                <div class="left aligned column">
-                                    <input id="from_eml" type="checkbox" checked>
-                                </div>
+                            <input id="chunk_size" type="text" size="8" value="1000">
+                        </div>
+                        <div class="inline field">
+                            <div class="ui toggle checkbox">
+                                <input id="stitch" type="checkbox" tabindex="1" class="hidden" checked="checked">
+                                <label>Stitch chunks?</label>
                             </div>
                         </div>
-
-                    <button id="btn_submit">Convert</button>
-
-                    <p></p>
-                    <div id="prog_bar" style="visibility: hidden">
-                        <progress id="p"></progress>
+                        <div class="inline field">
+                            <div class="ui toggle checkbox">
+                                <input id="from_eml" type="checkbox" tabindex="1" class="hidden" checked="checked">
+                                <label>Is source .EML?</label>
+                            </div>
+                        </div>
+                        <button class="ui button" id="btn_submit" type="submit">Convert</button>
                     </div>
-                    <p/>
-                    <div id="stdout">
-                        <div id="progress_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
-                    </div>
-                </form>
+                </div>
+            </div>
+        <div class="row">
+            <div class="eight wide column">
+                <div id="prog_bar" class="ui green progress" style="visibility: hidden">
+                    <div id="p" class="bar"></div>
+                </div>
+                <div id="stdout">
+                    <div id="progress_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 {% endblock %}
+</div>
