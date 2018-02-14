@@ -22,9 +22,10 @@ from lib.text_to_nlp import *
 from lib.nlp_to_xml import *
 from lib.eaxs_to_tagged import *
 
-ex_dir = os.path.join(os.getcwd(), "tomes_tool")
+ex_dir = os.getcwd()
 
-class TOMESToolTagger():
+
+class TOMESToolTagger:
     """ A class to convert an EAXS file to a tagged EAXS document.
 
     Example:
