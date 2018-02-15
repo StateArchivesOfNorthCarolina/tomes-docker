@@ -275,10 +275,7 @@ class EAXSToTagged():
                 messages_to_process += 1
                 mem_free += 1
                 self.logger.info("{}".format(mem_free))
-                if mem_free > 20000:
-                    mem_free = 0
-                    gc.collect()
-
+                gc.collect()
                 ev = None
                 el = None
 
