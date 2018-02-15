@@ -22,6 +22,7 @@ import logging
 import os
 from lxml import etree
 import unicodedata
+import gc
 
 
 class EAXSToTagged():
@@ -281,10 +282,12 @@ class EAXSToTagged():
                 mem_free += 1
                 if mem_free > 20000:
                     mem_free = 0
+                    gc.collect()
+
                 ev = None
                 el = None
 
-
+            gc.collect()
             # create <Account> element with attributes.
             with xfile.element("ncdcr:Account", GlobalId=self._get_global_id(eaxs_file), 
                     SourceEAXS=os.path.basename(eaxs_file), nsmap=self.ns_map):
