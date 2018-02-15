@@ -239,6 +239,24 @@ class EAXSToTagged():
 
         return message_el
 
+    def _count_items(self, exsf):
+        messages_to_process = 0
+        mem_free = 0
+        self.logger.info("Finding number of Messages.")
+
+        for ev, el in etree.iterparse(exsf, events=("end",),
+                                      strip_cdata=False,
+                                      tag="{http://www.archives.ncdcr.gov/mail-account}Message",
+                                      huge_tree=True):
+            el.clear()
+            mem_free += 1
+            self.logger.info("{}".format(mem_free))
+
+
+        gc.collect()
+        self.logger.info(messages_to_process)
+        return messages_to_process
+
     def write_tagged(self, eaxs_file, tagged_eaxs_file):
         """ Converts an EAXS file to a tagged EAXS document and writes it to 
         @tagged_eaxs_file.
@@ -264,20 +282,8 @@ class EAXSToTagged():
             self.logger.error(err)
             raise FileExistsError(err)
 
-        messages_to_process = 0
-        mem_free = 0
-        self.logger.info("Finding number of Messages.")
+        messages_to_process = self._count_items(eaxs_file)
 
-        for ev, el in etree.iterparse(eaxs_file, events=("end",),
-                                          strip_cdata=False,
-                                          tag="{http://www.archives.ncdcr.gov/mail-account}Message",
-                                          huge_tree=True):
-                mem_free += 1
-                self.logger.info("{}".format(mem_free))
-                ev = None
-                el = None
-
-        gc.collect()
         # write tagged EAXS file.
         with etree.xmlfile(tagged_eaxs_file, encoding=self.charset, close=True) as xfile:
 
