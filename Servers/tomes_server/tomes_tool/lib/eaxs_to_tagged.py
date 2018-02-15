@@ -264,22 +264,17 @@ class EAXSToTagged():
             self.logger.error(err)
             raise FileExistsError(err)
 
-        # write tagged EAXS file.
-        with etree.xmlfile(tagged_eaxs_file, encoding=self.charset, close=True) as xfile:
+        messages_to_process = 0
+        mem_free = 0
+        self.logger.info("Finding number of Messages.")
 
-            # write XML header; permanently register namespace prefix and URI.
-            xfile.write_declaration()
-            etree.register_namespace("ncdcr", self.ncdcr_uri)
-
-            messages_to_process = 0
-            mem_free = 0
-            self.logger.info("Finding number of Messages.")
-            for ev, el in etree.iterparse(eaxs_file, events=("end",),
+        for ev, el in etree.iterparse(eaxs_file, events=("end",),
                                           strip_cdata=False,
                                           tag="{http://www.archives.ncdcr.gov/mail-account}Message",
                                           huge_tree=True):
                 messages_to_process += 1
                 mem_free += 1
+                self.logger.info("{}".format(mem_free))
                 if mem_free > 20000:
                     mem_free = 0
                     gc.collect()
@@ -287,7 +282,13 @@ class EAXSToTagged():
                 ev = None
                 el = None
 
-            gc.collect()
+        # write tagged EAXS file.
+        with etree.xmlfile(tagged_eaxs_file, encoding=self.charset, close=True) as xfile:
+
+            # write XML header; permanently register namespace prefix and URI.
+            xfile.write_declaration()
+            etree.register_namespace("ncdcr", self.ncdcr_uri)
+
             # create <Account> element with attributes.
             with xfile.element("ncdcr:Account", GlobalId=self._get_global_id(eaxs_file), 
                     SourceEAXS=os.path.basename(eaxs_file), nsmap=self.ns_map):
