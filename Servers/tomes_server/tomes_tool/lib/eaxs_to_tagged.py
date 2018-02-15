@@ -240,7 +240,6 @@ class EAXSToTagged():
         return message_el
 
     def _count_items(self, exsf):
-        messages_to_process = 0
         mem_free = 0
         self.logger.info("Finding number of Messages.")
 
@@ -252,10 +251,9 @@ class EAXSToTagged():
             mem_free += 1
             self.logger.info("{}".format(mem_free))
 
-
         gc.collect()
-        self.logger.info(messages_to_process)
-        return messages_to_process
+        self.logger.info(mem_free)
+        return mem_free
 
     def write_tagged(self, eaxs_file, tagged_eaxs_file):
         """ Converts an EAXS file to a tagged EAXS document and writes it to 
