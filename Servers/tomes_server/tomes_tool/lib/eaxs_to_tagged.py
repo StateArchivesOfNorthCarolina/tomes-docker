@@ -272,7 +272,6 @@ class EAXSToTagged():
                                           strip_cdata=False,
                                           tag="{http://www.archives.ncdcr.gov/mail-account}Message",
                                           huge_tree=True):
-                messages_to_process += 1
                 mem_free += 1
                 self.logger.info("{}".format(mem_free))
                 gc.collect()
