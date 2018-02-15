@@ -274,10 +274,10 @@ class EAXSToTagged():
                                           huge_tree=True):
                 mem_free += 1
                 self.logger.info("{}".format(mem_free))
-                gc.collect()
                 ev = None
                 el = None
 
+        gc.collect()
         # write tagged EAXS file.
         with etree.xmlfile(tagged_eaxs_file, encoding=self.charset, close=True) as xfile:
 
