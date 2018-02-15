@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     $("#pst_convert").addClass("active");
 
-    $('.ui.progress').toggle('visible')
+    $('.ui.progress')
         .progress({
             duration : 0,
             total    : 100,
