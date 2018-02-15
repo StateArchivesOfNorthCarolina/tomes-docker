@@ -271,12 +271,16 @@ class EAXSToTagged():
             etree.register_namespace("ncdcr", self.ncdcr_uri)
 
             messages_to_process = 0
+            mem_free = 0
             self.logger.info("Finding number of Messages.")
             for ev, el in etree.iterparse(eaxs_file, events=("end",),
                                           strip_cdata=False,
                                           tag="{http://www.archives.ncdcr.gov/mail-account}Message",
                                           huge_tree=True):
                 messages_to_process += 1
+                mem_free += 1
+                if mem_free > 20000:
+                    mem_free = 0
                 ev = None
                 el = None
 
