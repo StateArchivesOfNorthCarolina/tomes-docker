@@ -88,6 +88,7 @@ class TomesToolConvert(WebSocketServerProtocol):
         self.opts.append('python')
         self.opts.append(os.path.join(os.getcwd(), os.path.join('tomes_tool', 'main.py')))
         self.opts.append(self.eaxs_file)
+        self.opts.append(self.output_file_name)
         print(self.opts)
         # self.opts.append(self.output_file_name)
 

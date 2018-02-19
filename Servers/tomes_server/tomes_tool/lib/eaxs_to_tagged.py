@@ -251,7 +251,6 @@ class EAXSToTagged():
             mem_free += 1
             self.logger.info("{}".format(mem_free))
 
-        gc.collect()
         self.logger.info(mem_free)
         return mem_free
 
