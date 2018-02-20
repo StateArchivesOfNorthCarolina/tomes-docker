@@ -88,6 +88,7 @@ class TomesToolConvert(WebSocketServerProtocol):
         self.opts.append('python')
         self.opts.append(os.path.join(os.getcwd(), os.path.join('tomes_tool', 'tagger.py')))
         self.opts.append(self.eaxs_file)
+        self.opts.append(self.output_file_name)
 
     def find_file_in_path(self):
         self.sendMessage(self.get_message_for_sending(self.SEND_STD_OUT, "Locating files..."))
