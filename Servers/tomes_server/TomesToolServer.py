@@ -15,8 +15,8 @@ class TomesToolConvert(WebSocketServerProtocol):
     SEND_STD_OUT = 1
     SEND_PROG_ON = 2
     SEND_PROG_OFF = 3
-
     SEND_FOLDER_LIST = 5
+
     RECV_FILE_PACK = 4
     p = platform
 
@@ -24,7 +24,6 @@ class TomesToolConvert(WebSocketServerProtocol):
         super().__init__()
         self.on_posix = 'posix' in sys.builtin_module_names
         #TODO: Remove when we go into full production
-        #self.production = False
         self.production = True
         self.opts = []
         self.eaxs_file_name = None
@@ -86,7 +85,8 @@ class TomesToolConvert(WebSocketServerProtocol):
 
     def build_opts(self):
         self.opts.append('python')
-        self.opts.append(os.path.join(os.getcwd(), os.path.join('tomes_tool', 'tagger.py')))
+        self.opts.append(os.path.join(os.getcwd(),
+                                      os.path.join(os.path.sep.join(['tomes_tool', 'tomes_tool']), 'tagger.py')))
         self.opts.append(self.eaxs_file)
         self.opts.append(self.output_file_name)
 
