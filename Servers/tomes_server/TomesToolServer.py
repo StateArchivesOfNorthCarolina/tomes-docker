@@ -29,6 +29,7 @@ class TomesToolConvert(WebSocketServerProtocol):
         self.eaxs_file_name = None
         self.eaxs_file = None
         self.output_file_name = None
+        self.tagged_out = None
         self.server_name = "NER Server"
         self.file_tree = []
         self.presented_names = {}
@@ -95,6 +96,7 @@ class TomesToolConvert(WebSocketServerProtocol):
         for root, dirs, files in os.walk(self.eaxs_base):
             if self.eaxs_file_name in files:
                 self.eaxs_file = os.path.join(root, self.eaxs_file_name)
+                self.tagged_out = os.path.join(root, self.output_file_name)
                 return
 
     def convert(self):
