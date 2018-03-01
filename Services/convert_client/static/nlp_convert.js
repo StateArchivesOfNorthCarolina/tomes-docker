@@ -71,6 +71,14 @@ $(document).ready(function () {
 
         $("#nlp_convert").addClass("active");
 
+        $('.ui.progress')
+            .progress({
+                duration : 0,
+                total    : 100,
+                value: 99,
+                autoSuccess: false
+            });
+
     });
 });
 

@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     $("#pst_convert").addClass("active");
 
-    $('.ui.progress').toggle('visible')
+    $('.ui.progress')
         .progress({
             duration : 0,
             total    : 100,
@@ -116,7 +116,7 @@ function to_jsn(o, s) {
 }
 
 function write_to_stdout(payload) {
-    if (line_buffer < 500) {
+    if (line_buffer < 50) {
         $("#progress_from_server").append(payload + '<br>')
     } else {
         $("#progress_from_server").html('');
