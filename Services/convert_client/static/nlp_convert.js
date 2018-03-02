@@ -71,10 +71,6 @@ $(document).ready(function () {
 
         $("#nlp_convert").addClass("active");
 
-<<<<<<< HEAD
-=======
-
->>>>>>> master
         $('.ui.progress')
             .progress({
                 duration : 0,
