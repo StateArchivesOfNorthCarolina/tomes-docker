@@ -15,8 +15,8 @@ class TomesToolConvert(WebSocketServerProtocol):
     SEND_STD_OUT = 1
     SEND_PROG_ON = 2
     SEND_PROG_OFF = 3
-
     SEND_FOLDER_LIST = 5
+
     RECV_FILE_PACK = 4
     p = platform
 
@@ -24,12 +24,12 @@ class TomesToolConvert(WebSocketServerProtocol):
         super().__init__()
         self.on_posix = 'posix' in sys.builtin_module_names
         #TODO: Remove when we go into full production
-        #self.production = False
         self.production = True
         self.opts = []
         self.eaxs_file_name = None
         self.eaxs_file = None
         self.output_file_name = None
+        self.tagged_out = None
         self.server_name = "NER Server"
         self.file_tree = []
         self.presented_names = {}
@@ -86,16 +86,17 @@ class TomesToolConvert(WebSocketServerProtocol):
 
     def build_opts(self):
         self.opts.append('python')
-        self.opts.append(os.path.join(os.getcwd(), os.path.join('tomes_tool', 'main.py')))
+        self.opts.append(os.path.join(os.getcwd(),
+                                      os.path.join(os.path.sep.join(['tomes_tool', 'tomes_tool']), 'tagger.py')))
         self.opts.append(self.eaxs_file)
-        print(self.opts)
-        # self.opts.append(self.output_file_name)
+        self.opts.append(self.tagged_out)
 
     def find_file_in_path(self):
         self.sendMessage(self.get_message_for_sending(self.SEND_STD_OUT, "Locating files..."))
         for root, dirs, files in os.walk(self.eaxs_base):
             if self.eaxs_file_name in files:
                 self.eaxs_file = os.path.join(root, self.eaxs_file_name)
+                self.tagged_out = os.path.join(root, self.output_file_name)
                 return
 
     def convert(self):

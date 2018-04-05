@@ -50,13 +50,20 @@ class EmlWalker:
         self.cur_fn = str
 
     def do_walk(self):
+        """
+        do_walk is the main function of the module.
+
+        :return:
+        """
         # If this is a TOMES_TOOL Struct use the folder_map
         if self.from_tomes:
             self.account_directory = os.path.join(self.data_dir, self.account_name)
-            with open(os.path.join(self.account_directory, "folder_map.tsv")) as fh:
-                for line in fh.readlines():
-                    s = line.strip().split("\t")
-                    self.folder_map[s[0]] = s[1]
+            # Did someone make a mistake? Check to make sure folder_map is there
+            if os.path.exists(os.path.join(self.account_directory, "folder_map.tsv")):
+                self._build_folder_map(os.path.join(self.account_directory, "folder_map.tsv"))
+            else:
+                CommonMethods.set_from_tomes(False)
+
         print("Scanning data structure for emails.")
         for root, dirs, files in os.walk(self.account_directory):
             for f in files:
@@ -65,6 +72,12 @@ class EmlWalker:
                 if f.endswith("eml"):
                     self.message_pack[root].append(f)
         self.process_folders()
+
+    def _build_folder_map(self, path_to_map):
+        with open(os.path.join(path_to_map)) as fh:
+            for line in fh.readlines():
+                s = line.strip().split("\t")
+                self.folder_map[s[0]] = s[1]
 
     def process_folders(self):
         for path, files in self.message_pack.items():
@@ -105,8 +118,12 @@ class EmlWalker:
         pass
 
     def _process_message(self, mes):
-        e_msg = DmMessage(self.expand_path_from_map(self.current_relpath), CommonMethods.increment_local_id(), mes,
-                          self.cur_fn)
+        if CommonMethods.get_tomes_tool():
+            e_msg = DmMessage(self.expand_path_from_map(self.current_relpath), CommonMethods.increment_local_id(), mes,
+                              self.cur_fn)
+        else:
+            e_msg = DmMessage(self.current_relpath, CommonMethods.increment_local_id(), mes,
+                              self.cur_fn)
         e_msg.message = None
         self.messages.append(e_msg)
 
