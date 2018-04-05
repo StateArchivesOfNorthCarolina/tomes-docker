@@ -2,7 +2,7 @@ version: '2'
 
 services:
   main-client:
-    build: ../Services/convert_client
+    image: govsanc/main-client
     ports:
     - 80:80
     depends_on:
@@ -20,7 +20,7 @@ services:
     - /var/run/docker.sock:/var/run/docker.sock
     - /usr/bin/docker:/usr/bin/docker
   pst-server:
-    build: ../Servers/pst_server
+    image: govsanc/pst-server
     ports:
     - 9000:9000
     volumes:
@@ -28,19 +28,19 @@ services:
     - /var/run/docker.sock:/var/run/docker.sock
     - /usr/bin/docker:/usr/bin/docker
   darcmail-server:
-    build: ../Servers/darcm_server
+    image: govsanc/darcmail-server
     ports:
     - 9001:9001
     volumes:
     - /mnt/data:/home/tomes/data
   ner-server:
-    build: ../Servers/tomes_server
+    image: govsanc/ner-server
     ports:
     - 9002:9002
     volumes:
     - /mnt/data:/home/tomes/data
   corenlp-server:
-    build: ../Servers/corenlp_server
+    image: govsanc/corenlp-server
     ports:
     - 9003:9003
     volumes:
