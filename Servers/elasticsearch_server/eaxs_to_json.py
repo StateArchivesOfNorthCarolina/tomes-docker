@@ -2,9 +2,8 @@ import lxml.etree as etree
 import json
 from elasticsearch import Elasticsearch
 from io import StringIO
-from elasticsearch_dsl import Search
-
-es = Elasticsearch(['192.168.99.100'], port=9200)
+import socket
+import sys
 
 NS = "{http://www.archives.ncdcr.gov/mail-account}"
 ID = NS + "LocalId"
@@ -26,17 +25,25 @@ ES_MAP = {ID: "EAXS_ID", SUBJECT: "SUBJECT", FROM: "FROM", TO: "TO", CC: "CC",
 
 
 class EaxsToElastic:
-    def __init__(self, file, my_ns=NS, tag="Message") -> None:
+    def __init__(self, file, container_ip: str, my_ns=NS, tag="Message") -> None:
         self.production = False
         self.file_to_parse = file
         self.NS = my_ns
         self.tag = tag
+        self.elastic_ip = container_ip
+        self.es = None
         self.search_tag = "{}{}".format(self.NS, self.tag)
         self.context = etree.iterparse(file, tag=self.search_tag)
         self.stats = {}
         self.entity_type_stats = {}
         self.has_pii = False
+        self._get_ip()
 
+    def _get_ip(self):
+        if self.production:
+            self.es = Elasticsearch([self.elastic_ip], port=9200)
+        else:
+            self.es = Elasticsearch(['192.168.99.100'], port=9200)
 
     def convert(self):
         for event, element in self.context:
@@ -85,9 +92,12 @@ class EaxsToElastic:
                 if entity not in self.stats:
                     self.stats[entity] = 1
                 self.stats[entity] += 1
-                auth = a['authority']
-                group = a['group']
-                positions.append(int(a['group']))
+                try:
+                    auth = a['authority']
+                    group = a['group']
+                    positions.append(int(a['group']))
+                except KeyError as e:
+                    pass
                 if entity in self.stats:
                     self.stats[entity] += 1
                 else:
@@ -120,6 +130,7 @@ class EaxsToElastic:
         js['PROCESSED'] = element.get('Processed')
         js['RECORD'] = element.get('Record')
         js['FOLDER'] = element.get('ParentFolder')
+        js['RESTRICTED'] = element.get('Restricted')
         for k, v in self.stats.items():
             js[k] = v
         if self.has_pii:
@@ -130,9 +141,11 @@ class EaxsToElastic:
             # Replace stripped with CONTENT
             js['CONTENT'] = js['SCONTENT']
             js.pop('SCONTENT', None)
-        es.index(index="eaxs_index", doc_type="email", id=int(js['EAXS_ID']), body=json.dumps(js))
-
-        print(json.dumps(js))
+        try:
+            self.es.index(index="eaxs_index", doc_type="email", id=int(js['EAXS_ID']), body=json.dumps(js))
+            print(json.dumps(js))
+        except Exception as e:
+            print(e)
 
     def get_stats(self, ele: etree.Element):
         st_el = etree.tostring(ele)
@@ -141,27 +154,7 @@ class EaxsToElastic:
             print(child.attrib)
 
 
-def query_tests():
-    d = {
-        "query": {
-            "match": {
-                "HAS_PII": "true"
-            }
-        }
-    }
-    s = Search().using(es).query(d)
-    #res = es.search(index="eaxs_index", doc_type="email", body=d)
-    #data = [doc for doc in res['hits']['hits']]
-    print(s.to_dict())
-    data = s.execute()
-    for v in data:
-        h = v["_source"]
-        print(h["HAS_PII"])
-
-
 if __name__ == "__main__":
-    #file = "E:\RESOURCES\TEST_RESOURCES\\tomes\data\eaxs\zach.ambrose-ca1\eaxs_xml\\zach.ambrose-ca1__tagged.xml"
-    #file = "E:\RESOURCES\TEST_RESOURCES\\tomes\data\eaxs\\test_mbox_a_dandy_email_account\eaxs_xml\\test_mbox_a_dandy_email_account__tagged.xml"
-    #eaxs2el = EaxsToElastic(file)
-    #eaxs2el.convert()
-    query_tests()
+    args = sys.argv
+    eaxs2el = EaxsToElastic(args[1], args[2])
+    eaxs2el.convert()

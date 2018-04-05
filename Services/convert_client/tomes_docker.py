@@ -1,7 +1,20 @@
-from flask import Flask, render_template,  make_response
+from flask import Flask, render_template,  make_response, redirect
 import subprocess
 
 app = Flask(__name__, static_url_path="/static")
+
+
+@app.route('/elastic/<int:start_stop>')
+def elastic_start_stop(start_stop: int):
+    if start_stop == 1:
+        r = subprocess.Popen(["cmd", "echo", "hello, world"], stdout=subprocess.PIPE)
+        out, err = r.communicate()
+        if err == 0:
+            pass
+    else:
+        r = subprocess.call(["docker", "run", "-p", "9200:9200", "-p", "9300:9300", "-e", "discovery.type=single-node",
+                             "docker.elastic.co/elasticsearch/elasticsearch:6.2.2"])
+    return redirect(do_stop_start_elastic)
 
 
 @app.route('/elastic')

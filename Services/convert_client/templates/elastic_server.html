@@ -7,22 +7,53 @@
 {% endblock %}
 
 {% block content %}
-<form>
-    <div id="account_list">
-        <input type="file" id="flup" onchange="getfolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory />
-        <p/>
-        <div id="account_sel" style="visibility: hidden"></div>
+<div class="ui form">
+    <div class="inline field">
+        <label id="ss_slider"></label>
+        <button id="elastic_activate" class="ui primary button">Turn Elastic On</button>
     </div>
-
-<div id="start_stop" style="visibility: hidden">
-    <p/>
-    <button id="start_elastic">Start Server</button>
-    <p/>
-    <button id="stop_elastic">Stop Server</button>
-    <p/>
 </div>
-    <div id="stdout">
-        <div id="message_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
+
+<table id="elastic_accounts" class="ui celled padded table">
+    <thead>
+    <tr>
+        <th colspan="3">Accounts With Elastic Indexes</th>
+    </tr>
+    <tr>
+        <th class="single line">Account Name</th>
+        <th>Account Location</th>
+        <th>Select?</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+<table id="elastic_no_accounts" class="ui celled padded table">
+    <thead>
+    <tr>
+        <th colspan="3">Accounts Without Elastic Indexes</th>
+    </tr>
+    <tr>
+        <th class="single line">Account Name</th>
+        <th>Account Location</th>
+        <th>Select?</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+<div class="row">
+    <div class="eight wide column">
+        <div id="prog_bar" class="ui green progress" style="visibility: hidden">
+            <div id="p" class="bar"></div>
+        </div>
+        <div id="stdout">
+            <div id="progress_from_server" style="height: 400px; width: 900px; overflow: auto; border:thin black solid; padding: 1em; font-size: 11px"></div>
+        </div>
     </div>
-</form>
+</div>
 {% endblock %}

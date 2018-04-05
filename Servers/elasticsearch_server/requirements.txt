@@ -1,0 +1,4 @@
+Twisted==17.9.0
+autobahn==0.9.1
+elasticsearch>=6.0.0,<7.0.0
+lxml>=3.7.2

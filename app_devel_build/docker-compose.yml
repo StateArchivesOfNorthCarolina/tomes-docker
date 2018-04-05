@@ -10,11 +10,13 @@ services:
     - darcmail-server
     - ner-server
     - corenlp-server
+    - elastic-server
     links:
     - pst-server
     - darcmail-server
     - ner-server
     - corenlp-server
+    - elastic-server
     volumes:
     - /mnt/data:/home/tomes/data
     - /var/run/docker.sock:/var/run/docker.sock
@@ -45,3 +47,11 @@ services:
     - 9003:9003
     volumes:
     - /mnt/data:/home/tomes/data
+  elastic-server:
+    build: ../Servers/elasticsearch_server
+    ports:
+    - 9004:9004
+    volumes:
+    - /mnt/data:/home/tomes/data
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /usr/local/bin/docker:/usr/bin/docker

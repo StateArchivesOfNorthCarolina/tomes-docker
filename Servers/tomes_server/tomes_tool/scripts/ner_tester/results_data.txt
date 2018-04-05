@@ -1,0 +1,2437 @@
+#### non-expression patterns
+Attorney General
+	
+	Attorney	2aa1a6#0256::utah.gov::STATE.person
+	General	2aa1a6#0256::utah.gov::STATE.person
+
+
+AG
+	
+	AG	2aa1a6#0255::utah.gov::STATE.person
+
+
+Child and Family Services
+	
+	Child	2aa1a6#0257::utah.gov::STATE.department
+	and	2aa1a6#0257::utah.gov::STATE.department
+	Family	2aa1a6#0257::utah.gov::STATE.department
+	Services	2aa1a6#0257::utah.gov::STATE.department
+
+
+DCFS
+	
+	DCFS	2aa1a6#0258::utah.gov::STATE.division
+
+
+Workforce Services
+	
+	Workforce	2aa1a6#0263::utah.gov::STATE.department
+	Services	2aa1a6#0263::utah.gov::STATE.department
+
+
+DWS
+	
+	DWS	2aa1a6#0259::utah.gov::STATE.department
+
+
+Office of Recovery Services
+	
+	Office	2aa1a6#0261::utah.gov::STATE.department
+	of	2aa1a6#0261::utah.gov::STATE.department
+	Recovery	2aa1a6#0261::utah.gov::STATE.department
+	Services	2aa1a6#0261::utah.gov::STATE.department
+
+
+ORS
+	
+	ORS	2aa1a6#0262::utah.gov::STATE.department
+
+
+Office of Management and Budget
+	
+	Office	2aa1a6#0260::utah.gov::STATE.office
+	of	2aa1a6#0260::utah.gov::STATE.office
+	Management	2aa1a6#0260::utah.gov::STATE.office
+	and	2aa1a6#0260::utah.gov::STATE.office
+	Budget	2aa1a6#0260::utah.gov::STATE.office
+
+
+GOPB
+	
+	GOPB	2aa1a6#0008::kshs.org::STATE.office
+
+
+Constitution Hall
+	
+	Constitution	2aa1a6#0005::kshs.org::STATE.historic_site
+	Hall	2aa1a6#0005::kshs.org::STATE.historic_site
+
+
+Fort Hays
+	
+	Fort	2aa1a6#0007::kshs.org::STATE.historic_site
+	Hays	2aa1a6#0007::kshs.org::STATE.historic_site
+
+
+Grinter Place
+	
+	Grinter	2aa1a6#0010::kshs.org::STATE.historic_site
+	Place	2aa1a6#0010::kshs.org::STATE.historic_site
+
+
+Hollenberg Pony Express Station
+	
+	Hollenberg	2aa1a6#0011::kshs.org::STATE.historic_site
+	Pony	2aa1a6#0011::kshs.org::STATE.historic_site
+	Express	2aa1a6#0011::kshs.org::STATE.historic_site
+	Station	2aa1a6#0011::kshs.org::STATE.historic_site
+
+
+Kaw Mission
+	
+	Kaw	2aa1a6#0017::kshs.org::STATE.historic_site
+	Mission	2aa1a6#0017::kshs.org::STATE.historic_site
+
+
+Mine Creek Civil War Battlefront
+	
+	Mine	2aa1a6#0022::kshs.org::STATE.historic_site
+	Creek	2aa1a6#0022::kshs.org::STATE.historic_site
+	Civil	2aa1a6#0022::kshs.org::STATE.historic_site
+	War	2aa1a6#0022::kshs.org::STATE.historic_site
+	Battlefront	2aa1a6#0022::kshs.org::STATE.historic_site
+
+
+Pawnee Indian Museum
+	
+	Pawnee	2aa1a6#0023::kshs.org::STATE.historic_site
+	Indian	2aa1a6#0023::kshs.org::STATE.historic_site
+	Museum	2aa1a6#0023::kshs.org::STATE.historic_site
+
+
+Red Rocks
+	
+	Red	2aa1a6#0024::kshs.org::STATE.historic_site
+	Rocks	2aa1a6#0024::kshs.org::STATE.historic_site
+
+
+Kansas State Capitol
+	
+	Kansas	2aa1a6#0016::kshs.org::STATE.building
+	State	2aa1a6#0016::kshs.org::STATE.building
+	Capitol	2aa1a6#0016::kshs.org::STATE.building
+
+
+Kansas Museum of History
+	
+	Kansas	2aa1a6#0015::kshs.org::STATE.building
+	Museum	2aa1a6#0015::kshs.org::STATE.building
+	of	2aa1a6#0015::kshs.org::STATE.building
+	History	2aa1a6#0015::kshs.org::STATE.building
+
+
+Governor Sam Brownback
+	
+	Governor	2aa1a6#0009::kshs.org::STATE.official
+	Sam	2aa1a6#0009::kshs.org::STATE.official
+	Brownback	2aa1a6#0009::kshs.org::STATE.official
+
+
+Lieutenant Governor Jeff Colyer
+	
+	Lieutenant	2aa1a6#0021::kshs.org::STATE.official
+	Governor	2aa1a6#0021::kshs.org::STATE.official
+	Jeff	2aa1a6#0021::kshs.org::STATE.official
+	Colyer	2aa1a6#0021::kshs.org::STATE.official
+
+
+Capitol Preservation Committee
+	
+	Capitol	2aa1a6#0003::kshs.org::STATE.legislative_committee
+	Preservation	2aa1a6#0003::kshs.org::STATE.legislative_committee
+	Committee	2aa1a6#0003::kshs.org::STATE.legislative_committee
+
+
+Joint Committee on State Building Construction
+	
+	Joint	2aa1a6#0014::kshs.org::STATE.legislative_committee
+	Committee	2aa1a6#0014::kshs.org::STATE.legislative_committee
+	on	2aa1a6#0014::kshs.org::STATE.legislative_committee
+	State	2aa1a6#0014::kshs.org::STATE.legislative_committee
+	Building	2aa1a6#0014::kshs.org::STATE.legislative_committee
+	Construction	2aa1a6#0014::kshs.org::STATE.legislative_committee
+
+
+Legislative Coordinating Council
+	
+	Legislative	2aa1a6#0019::kshs.org::STATE.legislative_committee
+	Coordinating	2aa1a6#0019::kshs.org::STATE.legislative_committee
+	Council	2aa1a6#0019::kshs.org::STATE.legislative_committee
+
+
+House Appropriations Committee
+	
+	House	2aa1a6#0012::kshs.org::STATE.legislative_committee
+	Appropriations	2aa1a6#0012::kshs.org::STATE.legislative_committee
+	Committee	2aa1a6#0012::kshs.org::STATE.legislative_committee
+
+
+Senate Ways and Means
+	
+	Senate	2aa1a6#0027::kshs.org::STATE.legislative_committee
+	Ways	2aa1a6#0027::kshs.org::STATE.legislative_committee
+	and	2aa1a6#0027::kshs.org::STATE.legislative_committee
+	Means	2aa1a6#0027::kshs.org::STATE.legislative_committee
+
+
+House Education Committee
+	
+	House	2aa1a6#0013::kshs.org::STATE.legislative_committee
+	Education	2aa1a6#0013::kshs.org::STATE.legislative_committee
+	Committee	2aa1a6#0013::kshs.org::STATE.legislative_committee
+
+
+Senate Education Committee
+	
+	Senate	2aa1a6#0026::kshs.org::STATE.legislative_committee
+	Education	2aa1a6#0026::kshs.org::STATE.legislative_committee
+	Committee	2aa1a6#0026::kshs.org::STATE.legislative_committee
+
+
+State Historic Preservation Officer
+	
+	State	2aa1a6#0028::kshs.org::STATE.official
+	Historic	2aa1a6#0028::kshs.org::STATE.official
+	Preservation	2aa1a6#0028::kshs.org::STATE.official
+	Officer	2aa1a6#0028::kshs.org::STATE.official
+
+
+Secretary of Administration
+	
+	Secretary	2aa1a6#0025::kshs.org::STATE.official
+	of	2aa1a6#0025::kshs.org::STATE.official
+	Administration	2aa1a6#0025::kshs.org::STATE.official
+
+
+Division of the Budget
+	
+	Division	2aa1a6#0006::kshs.org::STATE.official
+	of	2aa1a6#0006::kshs.org::STATE.official
+	the	2aa1a6#0006::kshs.org::STATE.official
+	Budget	2aa1a6#0006::kshs.org::STATE.official
+
+
+Commissioner of Education
+	
+	Commissioner	2aa1a6#0004::kshs.org::STATE.official
+	of	2aa1a6#0004::kshs.org::STATE.official
+	Education	2aa1a6#0004::kshs.org::STATE.official
+
+
+Legislative Administrative Services
+	
+	Legislative	2aa1a6#0018::kshs.org::STATE.agency
+	Administrative	2aa1a6#0018::kshs.org::STATE.agency
+	Services	2aa1a6#0018::kshs.org::STATE.agency
+
+
+Legislative Division of Post-Audit
+	
+	Legislative	2aa1a6#0020::kshs.org::STATE.agency
+	Division	2aa1a6#0020::kshs.org::STATE.agency
+	of	2aa1a6#0020::kshs.org::STATE.agency
+	Post-Audit	2aa1a6#0020::kshs.org::STATE.agency
+
+
+Revisor of Statutes
+	
+	Revisor	2aa1a6#0188::nc.gov::STATE.agency
+	of	2aa1a6#0188::nc.gov::STATE.agency
+	Statutes	2aa1a6#0188::nc.gov::STATE.agency
+
+
+EDPNC
+	
+	EDPNC	2aa1a6#0084::nc.gov::STATE.organization
+
+
+CMS
+	
+	CMS	2aa1a6#0052::nc.gov::FEDERAL.organization
+
+
+FHWA
+	
+	FHWA	2aa1a6#0103::nc.gov::FEDERAL.organization
+
+
+DOJ
+	
+	DOJ	2aa1a6#0076::nc.gov::STATE.organization
+
+
+DHHS
+	
+	DHHS	2aa1a6#0065::nc.gov::STATE.organization
+
+
+DOT
+	
+	DOT	2aa1a6#0077::nc.gov::STATE.organization
+
+
+SBI
+	
+	SBI	2aa1a6#0202::nc.gov::STATE.organization
+
+
+SAC
+	
+	SAC	2aa1a6#0197::nc.gov::STATE.person
+
+
+NEPA
+	
+	NEPA	2aa1a6#0162::nc.gov::FEDERAL.governance
+
+
+SEPA
+	
+	SEPA	2aa1a6#0208::nc.gov::STATE.governance
+
+
+UBO
+	
+	UBO	2aa1a6#0228::nc.gov::STATE.governance
+
+
+CFR
+	
+	CFR	2aa1a6#0048::nc.gov::FEDERAL.governance
+
+
+C.F.R.
+	
+	C.F.R.	2aa1a6#0047::nc.gov::FEDERAL.governance
+
+
+USC
+	
+	USC	2aa1a6#0233::nc.gov::FEDERAL.governance
+
+
+U.S.C.
+	
+	U.S.C.	2aa1a6#0227::nc.gov::FEDERAL.governance
+
+
+GS
+	
+	GS	2aa1a6#0118::nc.gov::STATE.governance
+
+
+G.S.
+	
+	G.S.	2aa1a6#0113::nc.gov::STATE.governance
+
+
+DOA
+	
+	DOA	2aa1a6#0075::nc.gov::STATE.organization
+
+
+HUB
+	
+	HUB	2aa1a6#0127::nc.gov::STATE.organization
+
+
+HUB Office
+	
+	HUB	2aa1a6#0129::nc.gov::STATE.organization
+	Office	2aa1a6#0129::nc.gov::STATE.organization
+
+
+HUB Director
+	
+	HUB	2aa1a6#0128::nc.gov::STATE.person
+	Director	2aa1a6#0128::nc.gov::STATE.person
+
+
+State Purchase Officer
+	
+	State	2aa1a6#0219::nc.gov::STATE.person
+	Purchase	2aa1a6#0219::nc.gov::STATE.person
+	Officer	2aa1a6#0219::nc.gov::STATE.person
+
+
+P&C
+	
+	P&C	2aa1a6#0179::nc.gov::STATE.organization
+
+
+HR Mgmt
+	
+	HR	2aa1a6#0126::nc.gov::STATE.organization
+	Mgmt	2aa1a6#0126::nc.gov::STATE.organization
+
+
+State Parking Director
+	
+	State	2aa1a6#0218::nc.gov::STATE.organization
+	Parking	2aa1a6#0218::nc.gov::STATE.organization
+	Director	2aa1a6#0218::nc.gov::STATE.organization
+
+
+State Environmental Review Clearinghouse
+	
+	State	2aa1a6#0216::nc.gov::STATE.organization
+	Environmental	2aa1a6#0216::nc.gov::STATE.organization
+	Review	2aa1a6#0216::nc.gov::STATE.organization
+	Clearinghouse	2aa1a6#0216::nc.gov::STATE.organization
+
+
+Eugenics Commission
+	
+	Eugenics	2aa1a6#0096::nc.gov::STATE.organization
+	Commission	2aa1a6#0096::nc.gov::STATE.organization
+
+
+Eugenics Board
+	
+	Eugenics	2aa1a6#0095::nc.gov::STATE.organization
+	Board	2aa1a6#0095::nc.gov::STATE.organization
+
+
+Eugenics Compensation Task Force
+	
+	Eugenics	2aa1a6#0098::nc.gov::STATE.organization
+	Compensation	2aa1a6#0098::nc.gov::STATE.organization
+	Task	2aa1a6#0098::nc.gov::STATE.organization
+	Force	2aa1a6#0098::nc.gov::STATE.organization
+
+
+NC Eugenics Task Force
+	
+	NC	2aa1a6#0151::nc.gov::STATE.organization
+	Eugenics	2aa1a6#0151::nc.gov::STATE.organization
+	Task	2aa1a6#0151::nc.gov::STATE.organization
+	Force	2aa1a6#0151::nc.gov::STATE.organization
+
+
+Sterilization Victims Foundation
+	
+	Sterilization	2aa1a6#0221::nc.gov::STATE.organization
+	Victims	2aa1a6#0221::nc.gov::STATE.organization
+	Foundation	2aa1a6#0221::nc.gov::STATE.organization
+
+
+Eugenics Compensation Program
+	
+	Eugenics	2aa1a6#0097::nc.gov::STATE.organization
+	Compensation	2aa1a6#0097::nc.gov::STATE.organization
+	Program	2aa1a6#0097::nc.gov::STATE.organization
+
+
+Sterilization Foundation 
+	
+	Sterilization	2aa1a6#0220::nc.gov::STATE.organization
+	Foundation	2aa1a6#0220::nc.gov::STATE.organization
+		
+
+
+Project COPE
+	
+	Project	2aa1a6#0185::nc.gov::STATE.organization
+	COPE	2aa1a6#0185::nc.gov::STATE.organization
+
+
+Fiscal Mgmt
+	
+	Fiscal	2aa1a6#0104::nc.gov::STATE.organization
+	Mgmt	2aa1a6#0104::nc.gov::STATE.organization
+
+
+State Fair
+	
+	State	2aa1a6#0217::nc.gov::STATE.organization
+	Fair	2aa1a6#0217::nc.gov::STATE.organization
+
+
+Ag Statistics
+	
+	Ag	2aa1a6#0034::nc.gov::STATE.organization
+	Statistics	2aa1a6#0034::nc.gov::STATE.organization
+
+
+Vet Division
+	
+	Vet	2aa1a6#0235::nc.gov::STATE.organization
+	Division	2aa1a6#0235::nc.gov::STATE.organization
+
+
+S&W Cost Share Program
+	
+	S&W	2aa1a6#0192::nc.gov::STATE.organization
+	Cost	2aa1a6#0192::nc.gov::STATE.organization
+	Share	2aa1a6#0192::nc.gov::STATE.organization
+	Program	2aa1a6#0192::nc.gov::STATE.organization
+
+
+S&W
+	
+	S&W	2aa1a6#0191::nc.gov::STATE.organization
+
+
+Local SWCDs
+	
+	Local	2aa1a6#0146::nc.gov::STATE.organization
+	SWCDs	2aa1a6#0146::nc.gov::STATE.organization
+
+
+Division of Soil & Water 
+	
+	Division	2aa1a6#0072::nc.gov::STATE.organization
+	of	2aa1a6#0072::nc.gov::STATE.organization
+	Soil	2aa1a6#0072::nc.gov::STATE.organization
+	&	2aa1a6#0072::nc.gov::STATE.organization
+	Water	2aa1a6#0072::nc.gov::STATE.organization
+		
+
+
+NCFS
+	
+	NCFS	2aa1a6#0157::nc.gov::STATE.organization
+
+
+Forest Protection
+	
+	Forest	2aa1a6#0107::nc.gov::STATE.organization
+	Protection	2aa1a6#0107::nc.gov::STATE.organization
+
+
+Special Standards
+	
+	Special	2aa1a6#0214::nc.gov::STATE.organization
+	Standards	2aa1a6#0214::nc.gov::STATE.organization
+
+
+EP
+	
+	EP	2aa1a6#0090::nc.gov::STATE.organization
+
+
+Meat and Poultry Division
+	
+	Meat	2aa1a6#0147::nc.gov::STATE.organization
+	and	2aa1a6#0147::nc.gov::STATE.organization
+	Poultry	2aa1a6#0147::nc.gov::STATE.organization
+	Division	2aa1a6#0147::nc.gov::STATE.organization
+
+
+Board of Ag
+	
+	Board	2aa1a6#0046::nc.gov::STATE.organization
+	of	2aa1a6#0046::nc.gov::STATE.organization
+	Ag	2aa1a6#0046::nc.gov::STATE.organization
+
+
+Old Health Building
+	
+	Old	2aa1a6#0177::nc.gov::STATE.place
+	Health	2aa1a6#0177::nc.gov::STATE.place
+	Building	2aa1a6#0177::nc.gov::STATE.place
+
+
+Rural Rehab
+	
+	Rural	2aa1a6#0190::nc.gov::STATE.organization
+	Rehab	2aa1a6#0190::nc.gov::STATE.organization
+
+
+WNC Farmers Market
+	
+	WNC	2aa1a6#0238::nc.gov::STATE.place
+	Farmers	2aa1a6#0238::nc.gov::STATE.place
+	Market	2aa1a6#0238::nc.gov::STATE.place
+
+
+NCBiotech
+	
+	NCBiotech	2aa1a6#0154::nc.gov::STATE.organization
+
+
+WNC Agricultural Center
+	
+	WNC	2aa1a6#0237::nc.gov::STATE.place
+	Agricultural	2aa1a6#0237::nc.gov::STATE.place
+	Center	2aa1a6#0237::nc.gov::STATE.place
+
+
+DPS
+	
+	DPS	2aa1a6#0079::nc.gov::STATE.organization
+
+
+NCDPS
+	
+	NCDPS	2aa1a6#0155::nc.gov::STATE.organization
+
+
+SHP
+	
+	SHP	2aa1a6#0211::nc.gov::STATE.organization
+
+
+North Carolina Highway Patrol
+	
+	North	2aa1a6#0167::nc.gov::STATE.organization
+	Carolina	2aa1a6#0167::nc.gov::STATE.organization
+	Highway	2aa1a6#0167::nc.gov::STATE.organization
+	Patrol	2aa1a6#0167::nc.gov::STATE.organization
+
+
+ABC Commission
+	
+	ABC	2aa1a6#0031::nc.gov::STATE.organization
+	Commission	2aa1a6#0031::nc.gov::STATE.organization
+
+
+NC JOIN
+	
+	NC	2aa1a6#0152::nc.gov::STATE.organization
+	JOIN	2aa1a6#0152::nc.gov::STATE.organization
+
+
+JCPCs
+	
+	JCPCs	2aa1a6#0140::nc.gov::STATE.organization
+
+
+JCP Councils
+	
+	JCP	2aa1a6#0139::nc.gov::STATE.organization
+	Councils	2aa1a6#0139::nc.gov::STATE.organization
+
+
+Coal Ash Commission
+	
+	Coal	2aa1a6#0053::nc.gov::STATE.organization
+	Ash	2aa1a6#0053::nc.gov::STATE.organization
+	Commission	2aa1a6#0053::nc.gov::STATE.organization
+
+
+SERC
+	
+	SERC	2aa1a6#0209::nc.gov::STATE.organization
+
+
+Hurricane Matthew
+	
+	Hurricane	2aa1a6#0130::nc.gov::STATE.event
+	Matthew	2aa1a6#0130::nc.gov::STATE.event
+
+
+Charlotte demonstrations
+	
+	Charlotte	2aa1a6#0050::nc.gov::STATE.event
+	demonstrations	2aa1a6#0050::nc.gov::STATE.event
+
+
+Basic School
+	
+	Basic	2aa1a6#0040::nc.gov::STATE.organization
+	School	2aa1a6#0040::nc.gov::STATE.organization
+
+
+Samarcand Manor
+	
+	Samarcand	2aa1a6#0198::nc.gov::STATE.place
+	Manor	2aa1a6#0198::nc.gov::STATE.place
+
+
+Samarkand Manor
+	
+	Samarkand	2aa1a6#0199::nc.gov::STATE.place
+	Manor	2aa1a6#0199::nc.gov::STATE.place
+
+
+Adult Probation and Parole
+	
+	Adult	2aa1a6#0033::nc.gov::STATE.organization
+	Probation	2aa1a6#0033::nc.gov::STATE.organization
+	and	2aa1a6#0033::nc.gov::STATE.organization
+	Parole	2aa1a6#0033::nc.gov::STATE.organization
+
+
+Department of Correction
+	
+	Department	2aa1a6#0063::nc.gov::STATE.organization
+	of	2aa1a6#0063::nc.gov::STATE.organization
+	Correction	2aa1a6#0063::nc.gov::STATE.organization
+
+
+Corrections
+	
+	Corrections	2aa1a6#0058::nc.gov::STATE.organization
+
+
+Hammond Place
+	
+	Hammond	2aa1a6#0121::nc.gov::STATE.place
+	Place	2aa1a6#0121::nc.gov::STATE.place
+
+
+Colonial Pipeline
+	
+	Colonial	2aa1a6#0055::nc.gov::STATE.place
+	Pipeline	2aa1a6#0055::nc.gov::STATE.place
+
+
+EAS
+	
+	EAS	2aa1a6#0083::nc.gov::STATE.organization
+
+
+Incident Action Plans
+	
+	Incident	2aa1a6#0137::nc.gov::STATE.organization
+	Action	2aa1a6#0137::nc.gov::STATE.organization
+	Plans	2aa1a6#0137::nc.gov::STATE.organization
+
+
+North Carolina Emergency Management
+	
+	North	2aa1a6#0166::nc.gov::STATE.organization
+	Carolina	2aa1a6#0166::nc.gov::STATE.organization
+	Emergency	2aa1a6#0166::nc.gov::STATE.organization
+	Management	2aa1a6#0166::nc.gov::STATE.organization
+
+
+NCEM
+	
+	NCEM	2aa1a6#0156::nc.gov::STATE.organization
+
+
+AHIMTs
+	
+	AHIMTs	2aa1a6#0035::nc.gov::STATE.organization
+
+
+Albemarle Prison
+	
+	Albemarle	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Alexander Prison
+	
+	Alexander	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Avery Mitchell Prison
+	
+	Avery	2aa1a6#0243::nc.gov::STATE.place
+	Mitchell	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Bertie Prison
+	
+	Bertie	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Caldwell Prison
+	
+	Caldwell	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Caledonia Prison
+	
+	Caledonia	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Carteret Prison
+	
+	Carteret	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Caswell Prison
+	
+	Caswell	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Catawba Prison
+	
+	Catawba	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Columbus Prison
+	
+	Columbus	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Craggy Prison
+	
+	Craggy	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Craven Prison
+	
+	Craven	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Dan River Prison
+	
+	Dan	2aa1a6#0243::nc.gov::STATE.place
+	River	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Davidson Prison
+	
+	Davidson	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Eastern Prison
+	
+	Eastern	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Foothills Prison
+	
+	Foothills	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Forsyth Prison
+	
+	Forsyth	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Franklin Prison
+	
+	Franklin	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Gaston Prison
+	
+	Gaston	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Greene Prison
+	
+	Greene	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Harnett Prison
+	
+	Harnett	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Hoke Prison
+	
+	Hoke	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Hyde Prison
+	
+	Hyde	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Johnston Prison
+	
+	Johnston	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Lanesboro Prison
+	
+	Lanesboro	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Lincoln Prison
+	
+	Lincoln	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Lumberton Prison
+	
+	Lumberton	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Marion Prison
+	
+	Marion	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Maury Prison
+	
+	Maury	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Morrison Prison
+	
+	Morrison	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Mountain View Prison
+	
+	Mountain	2aa1a6#0243::nc.gov::STATE.place
+	View	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Nash Prison
+	
+	Nash	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Neuse Prison
+	
+	Neuse	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+New Hanover Prison
+	
+	New	2aa1a6#0243::nc.gov::STATE.place
+	Hanover	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Womens Prison
+	
+	Womens	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Odom Prison
+	
+	Odom	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Orange Prison
+	
+	Orange	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Pamlico Prison
+	
+	Pamlico	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Pasquotank Prison
+	
+	Pasquotank	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Pender Prison
+	
+	Pender	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Piedmont Prison
+	
+	Piedmont	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Polk Prison
+	
+	Polk	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Randolph Prison
+	
+	Randolph	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Rutherford Prison
+	
+	Rutherford	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Sampson Prison
+	
+	Sampson	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Sanford Prison
+	
+	Sanford	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Scotland Prison
+	
+	Scotland	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Southern Prison
+	
+	Southern	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Swannanoa Prison
+	
+	Swannanoa	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Tabor Prison
+	
+	Tabor	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Tyrrell Prison
+	
+	Tyrrell	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Wake Prison
+	
+	Wake	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Warren Prison
+	
+	Warren	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+
+
+Wilkes Prison 
+	
+	Wilkes	2aa1a6#0243::nc.gov::STATE.place
+	Prison	2aa1a6#0243::nc.gov::STATE.place
+		
+
+
+DIT
+	
+	DIT	2aa1a6#0071::nc.gov::STATE.organization
+
+
+State CIO
+	
+	State	2aa1a6#0215::nc.gov::STATE.person
+	CIO	2aa1a6#0215::nc.gov::STATE.person
+
+
+CGIA
+	
+	CGIA	2aa1a6#0049::nc.gov::STATE.organization
+
+
+VSOs
+	
+	VSOs	2aa1a6#0236::nc.gov::STATE.organization
+
+
+DMVA
+	
+	DMVA	2aa1a6#0073::nc.gov::STATE.organization
+
+
+DES
+	
+	DES	2aa1a6#0064::nc.gov::STATE.organization
+
+
+Employment Security Commission
+	
+	Employment	2aa1a6#0087::nc.gov::STATE.organization
+	Security	2aa1a6#0087::nc.gov::STATE.organization
+	Commission	2aa1a6#0087::nc.gov::STATE.organization
+
+
+NCHFA
+	
+	NCHFA	2aa1a6#0158::nc.gov::STATE.organization
+
+
+Administrative Office of the Courts
+	
+	Administrative	2aa1a6#0032::nc.gov::STATE.organization
+	Office	2aa1a6#0032::nc.gov::STATE.organization
+	of	2aa1a6#0032::nc.gov::STATE.organization
+	the	2aa1a6#0032::nc.gov::STATE.organization
+	Courts	2aa1a6#0032::nc.gov::STATE.organization
+
+
+AOC
+	
+	AOC	2aa1a6#0036::nc.gov::STATE.organization
+
+
+Judicial Branch
+	
+	Judicial	2aa1a6#0142::nc.gov::STATE.organization
+	Branch	2aa1a6#0142::nc.gov::STATE.organization
+
+
+Judicial Center
+	
+	Judicial	2aa1a6#0143::nc.gov::STATE.place
+	Center	2aa1a6#0143::nc.gov::STATE.place
+
+
+RRK
+	
+	RRK	2aa1a6#0189::nc.gov::STATE.organization
+
+
+IDS
+	
+	IDS	2aa1a6#0134::nc.gov::STATE.organization
+
+
+DA
+	
+	DA	2aa1a6#0060::nc.gov::STATE.person
+
+
+FOIA
+	
+	FOIA	2aa1a6#0106::nc.gov::FEDERAL.governance
+
+
+DNCR
+	
+	DNCR	2aa1a6#0074::nc.gov::STATE.organization
+
+
+DCR
+	
+	DCR	2aa1a6#0061::nc.gov::STATE.organization
+
+
+CWMTF
+	
+	CWMTF	2aa1a6#0059::nc.gov::STATE.organization
+
+
+SANC
+	
+	SANC	2aa1a6#0200::nc.gov::STATE.organization
+
+
+OSA
+	
+	OSA	2aa1a6#0178::nc.gov::STATE.organization
+
+
+OAH
+	
+	OAH	2aa1a6#0173::nc.gov::STATE.organization
+
+
+DPI
+	
+	DPI	2aa1a6#0078::nc.gov::STATE.organization
+
+
+Golden LEAF
+	
+	Golden	2aa1a6#0116::nc.gov::STATE.organization
+	LEAF	2aa1a6#0116::nc.gov::STATE.organization
+
+
+OBX
+	
+	OBX	2aa1a6#0174::nc.gov::STATE.place
+
+
+Judge Mann
+	
+	Judge	2aa1a6#0141::nc.gov::STATE.person
+	Mann	2aa1a6#0141::nc.gov::STATE.person
+
+
+Arts Council
+	
+	Arts	2aa1a6#0037::nc.gov::STATE.organization
+	Council	2aa1a6#0037::nc.gov::STATE.organization
+
+
+NCMOA
+	
+	NCMOA	2aa1a6#0159::nc.gov::STATE.organization
+
+
+NCMOH
+	
+	NCMOH	2aa1a6#0160::nc.gov::STATE.organization
+
+
+Fort Fisher
+	
+	Fort	2aa1a6#0109::nc.gov::STATE.place
+	Fisher	2aa1a6#0109::nc.gov::STATE.place
+
+
+Ft. Fisher
+	
+	Ft.	2aa1a6#0111::nc.gov::STATE.place
+	Fisher	2aa1a6#0111::nc.gov::STATE.place
+
+
+Fort Dobbs
+	
+	Fort	2aa1a6#0108::nc.gov::STATE.place
+	Dobbs	2aa1a6#0108::nc.gov::STATE.place
+
+
+Ft. Dobbs
+	
+	Ft.	2aa1a6#0110::nc.gov::STATE.place
+	Dobbs	2aa1a6#0110::nc.gov::STATE.place
+
+
+Tryon Palace
+	
+	Tryon	2aa1a6#0226::nc.gov::STATE.place
+	Palace	2aa1a6#0226::nc.gov::STATE.place
+
+
+Battleship North Carolina
+	
+	Battleship	2aa1a6#0042::nc.gov::STATE.place
+	North	2aa1a6#0042::nc.gov::STATE.place
+	Carolina	2aa1a6#0042::nc.gov::STATE.place
+
+
+Bath
+	
+	Bath	2aa1a6#0041::nc.gov::STATE.place
+
+
+Bennett Place
+	
+	Bennett	2aa1a6#0044::nc.gov::STATE.place
+	Place	2aa1a6#0044::nc.gov::STATE.place
+
+
+House in the Horseshoe
+	
+	House	2aa1a6#0125::nc.gov::STATE.place
+	in	2aa1a6#0125::nc.gov::STATE.place
+	the	2aa1a6#0125::nc.gov::STATE.place
+	Horseshoe	2aa1a6#0125::nc.gov::STATE.place
+
+
+Reed Gold Mine
+	
+	Reed	2aa1a6#0186::nc.gov::STATE.place
+	Gold	2aa1a6#0186::nc.gov::STATE.place
+	Mine	2aa1a6#0186::nc.gov::STATE.place
+
+
+Town Creek Indian Mound
+	
+	Town	2aa1a6#0224::nc.gov::STATE.place
+	Creek	2aa1a6#0224::nc.gov::STATE.place
+	Indian	2aa1a6#0224::nc.gov::STATE.place
+	Mound	2aa1a6#0224::nc.gov::STATE.place
+
+
+FERPA
+	
+	FERPA	2aa1a6#0102::nc.gov::FEDERAL.governance
+
+
+ESSA
+	
+	ESSA	2aa1a6#0094::nc.gov::FEDERAL.governance
+
+
+LEA
+	
+	LEA	2aa1a6#0144::nc.gov::STATE.local_organization
+
+
+IHE
+	
+	IHE	2aa1a6#0135::nc.gov::STATE.organization
+
+
+MTSS
+	
+	MTSS	2aa1a6#0150::nc.gov::STATE.governance
+
+
+ESDB
+	
+	ESDB	2aa1a6#0093::nc.gov::STATE.organization
+
+
+DST
+	
+	DST	2aa1a6#0080::nc.gov::STATE.governance
+
+
+PIO
+	
+	PIO	2aa1a6#0182::nc.gov::STATE.person
+
+
+EO
+	
+	EO	2aa1a6#0089::nc.gov::STATE.governance
+
+
+E.O.
+	
+	E.O.	2aa1a6#0082::nc.gov::STATE.governance
+
+
+E. O. 
+	
+	E.	2aa1a6#0081::nc.gov::STATE.governance
+	O.	2aa1a6#0081::nc.gov::STATE.governance
+		
+
+
+G. S.
+	
+	G.	2aa1a6#0112::nc.gov::STATE.governance
+	S.	2aa1a6#0112::nc.gov::STATE.governance
+
+
+HB
+	
+	HB	2aa1a6#0122::nc.gov::STATE.governance
+
+
+H.B.
+	
+	H.B.	2aa1a6#0120::nc.gov::STATE.governance
+
+
+H. B.
+	
+	H.	2aa1a6#0119::nc.gov::STATE.governance
+	B.	2aa1a6#0119::nc.gov::STATE.governance
+
+
+NCAC
+	
+	NCAC	2aa1a6#0153::nc.gov::STATE.governance
+
+
+SB
+	
+	SB	2aa1a6#0201::nc.gov::STATE.governance
+
+
+S.B.
+	
+	S.B.	2aa1a6#0195::nc.gov::STATE.governance
+
+
+S. B.
+	
+	S.	2aa1a6#0193::nc.gov::STATE.governance
+	B.	2aa1a6#0193::nc.gov::STATE.governance
+
+
+SL
+	
+	SL	2aa1a6#0213::nc.gov::STATE.governance
+
+
+S.L.
+	
+	S.L.	2aa1a6#0196::nc.gov::STATE.governance
+
+
+S. L.
+	
+	S.	2aa1a6#0194::nc.gov::STATE.governance
+	L.	2aa1a6#0194::nc.gov::STATE.governance
+
+
+General Statute
+	
+	General	2aa1a6#0114::nc.gov::STATE.governance
+	Statute	2aa1a6#0114::nc.gov::STATE.governance
+
+
+North Carolina Administrative Code
+	
+	North	2aa1a6#0165::nc.gov::STATE.governance
+	Carolina	2aa1a6#0165::nc.gov::STATE.governance
+	Administrative	2aa1a6#0165::nc.gov::STATE.governance
+	Code	2aa1a6#0165::nc.gov::STATE.governance
+
+
+United States Code
+	
+	United	2aa1a6#0232::nc.gov::FEDERAL.governance
+	States	2aa1a6#0232::nc.gov::FEDERAL.governance
+	Code	2aa1a6#0232::nc.gov::FEDERAL.governance
+
+
+Session Law
+	
+	Session	2aa1a6#0210::nc.gov::STATE.governance
+	Law	2aa1a6#0210::nc.gov::STATE.governance
+
+
+House Bill
+	
+	House	2aa1a6#0124::nc.gov::STATE.governance
+	Bill	2aa1a6#0124::nc.gov::STATE.governance
+
+
+Senate Bill
+	
+	Senate	2aa1a6#0206::nc.gov::STATE.governance
+	Bill	2aa1a6#0206::nc.gov::STATE.governance
+
+
+General Statutes
+	
+	General	2aa1a6#0115::nc.gov::STATE.governance
+	Statutes	2aa1a6#0115::nc.gov::STATE.governance
+
+
+Executive Order
+	
+	Executive	2aa1a6#0099::nc.gov::STATE.governance
+	Order	2aa1a6#0099::nc.gov::STATE.governance
+
+
+Code of Federal Regulations
+	
+	Code	2aa1a6#0054::nc.gov::FEDERAL.governance
+	of	2aa1a6#0054::nc.gov::FEDERAL.governance
+	Federal	2aa1a6#0054::nc.gov::FEDERAL.governance
+	Regulations	2aa1a6#0054::nc.gov::FEDERAL.governance
+
+
+deductible
+	
+	deductible	2aa1a6#0062::nc.gov::PII.personal_health_information
+
+
+diagnosis
+	
+	diagnosis	2aa1a6#0066::nc.gov::PII.personal_health_information
+
+
+EHR
+	
+	EHR	2aa1a6#0085::nc.gov::PII.personal_health_information
+
+
+EMR
+	
+	EMR	2aa1a6#0088::nc.gov::PII.personal_health_information
+
+
+ePHI 
+	
+	ePHI	2aa1a6#0091::nc.gov::PII.personal_health_information
+		
+
+
+e-PHI 
+	
+	e-PHI	2aa1a6#0092::nc.gov::PII.personal_health_information
+		
+
+
+FMLA
+	
+	FMLA	2aa1a6#0105::nc.gov::PII.personal_health_information
+
+
+health condition
+	
+	health	2aa1a6#0123::nc.gov::PII.personal_health_information
+	condition	2aa1a6#0123::nc.gov::PII.personal_health_information
+
+
+medical records
+	
+	medical	2aa1a6#0148::nc.gov::PII.personal_health_information
+	records	2aa1a6#0148::nc.gov::PII.personal_health_information
+
+
+patient
+	
+	patient	2aa1a6#0180::nc.gov::PII.personal_health_information
+
+
+PHI
+	
+	PHI	2aa1a6#0181::nc.gov::PII.personal_health_information
+
+
+policy number
+	
+	policy	2aa1a6#0183::nc.gov::PII.personal_health_information
+	number	2aa1a6#0183::nc.gov::PII.personal_health_information
+
+
+sick leave
+	
+	sick	2aa1a6#0212::nc.gov::PII.personal_health_information
+	leave	2aa1a6#0212::nc.gov::PII.personal_health_information
+
+
+attorney client privilege
+	
+	attorney	2aa1a6#0038::nc.gov::PII.sensitive_document
+	client	2aa1a6#0038::nc.gov::PII.sensitive_document
+	privilege	2aa1a6#0038::nc.gov::PII.sensitive_document
+
+
+attorney-client privilege
+	
+	attorney-client	2aa1a6#0039::nc.gov::PII.sensitive_document
+	privilege	2aa1a6#0039::nc.gov::PII.sensitive_document
+
+
+BCP
+	
+	BCP	2aa1a6#0043::nc.gov::PII.sensitive_document
+
+
+between us
+	
+	between	2aa1a6#0045::nc.gov::PII.sensitive_document
+	us	2aa1a6#0045::nc.gov::PII.sensitive_document
+
+
+classified
+	
+	classified	2aa1a6#0051::nc.gov::PII.sensitive_document
+
+
+confidential
+	
+	confidential	2aa1a6#0056::nc.gov::PII.sensitive_document
+
+
+COOP
+	
+	COOP	2aa1a6#0057::nc.gov::PII.sensitive_document
+
+
+disaster plan
+	
+	disaster	2aa1a6#0067::nc.gov::PII.sensitive_document
+	plan	2aa1a6#0067::nc.gov::PII.sensitive_document
+
+
+disaster planning
+	
+	disaster	2aa1a6#0068::nc.gov::PII.sensitive_document
+	planning	2aa1a6#0068::nc.gov::PII.sensitive_document
+
+
+discreet
+	
+	discreet	2aa1a6#0069::nc.gov::PII.sensitive_document
+
+
+discrete
+	
+	discrete	2aa1a6#0070::nc.gov::PII.sensitive_document
+
+
+emergency response plan
+	
+	emergency	2aa1a6#0086::nc.gov::PII.sensitive_document
+	response	2aa1a6#0086::nc.gov::PII.sensitive_document
+	plan	2aa1a6#0086::nc.gov::PII.sensitive_document
+
+
+eyes only
+	
+	eyes	2aa1a6#0100::nc.gov::PII.sensitive_document
+	only	2aa1a6#0100::nc.gov::PII.sensitive_document
+
+
+eyes-only
+	
+	eyes-only	2aa1a6#0101::nc.gov::PII.sensitive_document
+
+
+grievance
+	
+	grievance	2aa1a6#0117::nc.gov::PII.sensitive_document
+
+
+hush hush
+	
+	hush	2aa1a6#0131::nc.gov::PII.sensitive_document
+	hush	2aa1a6#0131::nc.gov::PII.sensitive_document
+
+
+hushed
+	
+	hushed	2aa1a6#0132::nc.gov::PII.sensitive_document
+
+
+hush-hush
+	
+	hush-hush	2aa1a6#0133::nc.gov::PII.sensitive_document
+
+
+in confidence
+	
+	in	2aa1a6#0136::nc.gov::PII.sensitive_document
+	confidence	2aa1a6#0136::nc.gov::PII.sensitive_document
+
+
+intelligence
+	
+	intelligence	2aa1a6#0138::nc.gov::PII.sensitive_document
+
+
+legal disclaimer
+	
+	legal	2aa1a6#0145::nc.gov::PII.sensitive_document
+	disclaimer	2aa1a6#0145::nc.gov::PII.sensitive_document
+
+
+military leave
+	
+	military	2aa1a6#0149::nc.gov::PII.sensitive_document
+	leave	2aa1a6#0149::nc.gov::PII.sensitive_document
+
+
+NDA
+	
+	NDA	2aa1a6#0161::nc.gov::PII.sensitive_document
+
+
+non disclosure
+	
+	non	2aa1a6#0163::nc.gov::PII.sensitive_document
+	disclosure	2aa1a6#0163::nc.gov::PII.sensitive_document
+
+
+non-disclosure
+	
+	non-disclosure	2aa1a6#0164::nc.gov::PII.sensitive_document
+
+
+not a matter of public record
+	
+	not	2aa1a6#0168::nc.gov::PII.sensitive_document
+	a	2aa1a6#0168::nc.gov::PII.sensitive_document
+	matter	2aa1a6#0168::nc.gov::PII.sensitive_document
+	of	2aa1a6#0168::nc.gov::PII.sensitive_document
+	public	2aa1a6#0168::nc.gov::PII.sensitive_document
+	record	2aa1a6#0168::nc.gov::PII.sensitive_document
+
+
+not a public record
+	
+	not	2aa1a6#0169::nc.gov::PII.sensitive_document
+	a	2aa1a6#0169::nc.gov::PII.sensitive_document
+	public	2aa1a6#0169::nc.gov::PII.sensitive_document
+	record	2aa1a6#0169::nc.gov::PII.sensitive_document
+
+
+not for publication
+	
+	not	2aa1a6#0170::nc.gov::PII.sensitive_document
+	for	2aa1a6#0170::nc.gov::PII.sensitive_document
+	publication	2aa1a6#0170::nc.gov::PII.sensitive_document
+
+
+not public
+	
+	not	2aa1a6#0171::nc.gov::PII.sensitive_document
+	public	2aa1a6#0171::nc.gov::PII.sensitive_document
+
+
+not to be quoted
+	
+	not	2aa1a6#0172::nc.gov::PII.sensitive_document
+	to	2aa1a6#0172::nc.gov::PII.sensitive_document
+	be	2aa1a6#0172::nc.gov::PII.sensitive_document
+	quoted	2aa1a6#0172::nc.gov::PII.sensitive_document
+
+
+off the record
+	
+	off	2aa1a6#0175::nc.gov::PII.sensitive_document
+	the	2aa1a6#0175::nc.gov::PII.sensitive_document
+	record	2aa1a6#0175::nc.gov::PII.sensitive_document
+
+
+off-the-record
+	
+	off-the-record	2aa1a6#0176::nc.gov::PII.sensitive_document
+
+
+private
+	
+	private	2aa1a6#0184::nc.gov::PII.sensitive_document
+
+
+restricted
+	
+	restricted	2aa1a6#0187::nc.gov::PII.sensitive_document
+
+
+sealed
+	
+	sealed	2aa1a6#0203::nc.gov::PII.sensitive_document
+
+
+sealed bid
+	
+	sealed	2aa1a6#0204::nc.gov::PII.sensitive_document
+	bid	2aa1a6#0204::nc.gov::PII.sensitive_document
+
+
+secret
+	
+	secret	2aa1a6#0205::nc.gov::PII.sensitive_document
+
+
+sensitive
+	
+	sensitive	2aa1a6#0207::nc.gov::PII.sensitive_document
+
+
+strictly prohibited
+	
+	strictly	2aa1a6#0222::nc.gov::PII.sensitive_document
+	prohibited	2aa1a6#0222::nc.gov::PII.sensitive_document
+
+
+top secret
+	
+	top	2aa1a6#0223::nc.gov::PII.sensitive_document
+	secret	2aa1a6#0223::nc.gov::PII.sensitive_document
+
+
+trade secret
+	
+	trade	2aa1a6#0225::nc.gov::PII.sensitive_document
+	secret	2aa1a6#0225::nc.gov::PII.sensitive_document
+
+
+under the table
+	
+	under	2aa1a6#0229::nc.gov::PII.sensitive_document
+	the	2aa1a6#0229::nc.gov::PII.sensitive_document
+	table	2aa1a6#0229::nc.gov::PII.sensitive_document
+
+
+under wraps
+	
+	under	2aa1a6#0230::nc.gov::PII.sensitive_document
+	wraps	2aa1a6#0230::nc.gov::PII.sensitive_document
+
+
+under-the-table
+	
+	under-the-table	2aa1a6#0231::nc.gov::PII.sensitive_document
+
+
+vacation leave
+	
+	vacation	2aa1a6#0234::nc.gov::PII.sensitive_document
+	leave	2aa1a6#0234::nc.gov::PII.sensitive_document
+
+
+#### utah_gov
+# PII.ut_employee_id
+123546
+	
+	123546	2aa1a6#0264::utah.gov::PII.employee_id
+
+
+# PII.ut_id_or_casefile_number
+# This will get overridden by the passport_number. Is what it is.
+123456789
+	
+	123456789	2aa1a6#0239::nc.gov::PII.passport_number
+
+
+# PII.ut_university_id
+U12345678
+	
+	U12345678	2aa1a6#0266::utah.gov::PII.university_id
+
+
+#### kshs_org
+# PII.drivers_license_number
+K00-00-0000
+	
+	K00-00-0000	2aa1a6#0030::kshs.org::PII.drivers_license_number
+
+
+K12-34-5678
+	
+	K12-34-5678	2aa1a6#0030::kshs.org::PII.drivers_license_number
+
+
+K98-76-5432
+	
+	K98-76-5432	2aa1a6#0030::kshs.org::PII.drivers_license_number
+
+
+K00000000
+	
+	K00000000	2aa1a6#0030::kshs.org::PII.drivers_license_number
+
+
+K12345678
+	
+	K12345678	2aa1a6#0030::kshs.org::PII.drivers_license_number
+
+
+K98765432
+	
+	K98765432	2aa1a6#0030::kshs.org::PII.drivers_license_number
+
+
+# PII.ks_tax_clearance_certificate
+xxxx-xxxx-xxxx
+	
+	xxxx-xxxx-xxxx	2aa1a6#0029::kshs.org::PII.tax_clearance_certificate
+
+
+X1X1-X1X1-X1X1
+	
+	X1X1-X1X1-X1X1	2aa1a6#0029::kshs.org::PII.tax_clearance_certificate
+
+
+AS12-DF34-GH56
+	
+	AS12-DF34-GH56	2aa1a6#0029::kshs.org::PII.tax_clearance_certificate
+
+
+123L-456K-789J
+	
+	123L-456K-789J	2aa1a6#0029::kshs.org::PII.tax_clearance_certificate
+
+
+POI1-UYT2-REW3
+	
+	POI1-UYT2-REW3	2aa1a6#0029::kshs.org::PII.tax_clearance_certificate
+
+
+1234-5678-9012
+	
+	1234-5678-9012	2aa1a6#0029::kshs.org::PII.tax_clearance_certificate
+
+
+#### nc_gov
+# code_of_federal_regulations_citation
+1 CFR 1
+	
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+	CFR	2aa1a6#0252::nc.gov::FEDERAL.governance
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+
+
+1 CFR 123
+	
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+	CFR	2aa1a6#0252::nc.gov::FEDERAL.governance
+	123	2aa1a6#0252::nc.gov::FEDERAL.governance
+
+
+1 CFR 123.1234
+	
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+	CFR	2aa1a6#0252::nc.gov::FEDERAL.governance
+	123.1234	2aa1a6#0252::nc.gov::FEDERAL.governance
+
+
+1 C.F.R 1
+	
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+	C.F.R	2aa1a6#0252::nc.gov::FEDERAL.governance
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+
+
+1 C.F.R 123
+	
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+	C.F.R	2aa1a6#0252::nc.gov::FEDERAL.governance
+	123	2aa1a6#0252::nc.gov::FEDERAL.governance
+
+
+1 C.F.R 123.1234
+	
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+	C.F.R	2aa1a6#0252::nc.gov::FEDERAL.governance
+	123.1234	2aa1a6#0252::nc.gov::FEDERAL.governance
+
+
+1 CFR § 1
+	
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+	CFR	2aa1a6#0252::nc.gov::FEDERAL.governance
+	§	2aa1a6#0252::nc.gov::FEDERAL.governance
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+
+
+1 CFR § 123
+	
+	1	2aa1a6#0252::nc.gov::FEDERAL.governance
+	CFR	2aa1a6#0252::nc.gov::FEDERAL.governance
+	§	2aa1a6#0252::nc.gov::FEDERAL.governance
+	123	2aa1a6#0252::nc.gov::FEDERAL.governance
+
+
+59 CFR § 123.1234
+	
+	59	2aa1a6#0252::nc.gov::FEDERAL.governance
+	CFR	2aa1a6#0252::nc.gov::FEDERAL.governance
+	§	2aa1a6#0252::nc.gov::FEDERAL.governance
+	123.1234	2aa1a6#0252::nc.gov::FEDERAL.governance
+
+
+# executive_order_citation
+Executive Order 123
+	
+	Executive	2aa1a6#0246::nc.gov::STATE.governance
+	Order	2aa1a6#0246::nc.gov::STATE.governance
+	123	2aa1a6#0246::nc.gov::STATE.governance
+
+
+Executive Order No. 1
+	
+	Executive	2aa1a6#0246::nc.gov::STATE.governance
+	Order	2aa1a6#0246::nc.gov::STATE.governance
+	No.	2aa1a6#0246::nc.gov::STATE.governance
+	1	2aa1a6#0246::nc.gov::STATE.governance
+
+
+EO123
+	
+	EO123	2aa1a6#0246::nc.gov::STATE.governance
+
+
+EO 123
+	
+	EO	2aa1a6#0246::nc.gov::STATE.governance
+	123	2aa1a6#0246::nc.gov::STATE.governance
+
+
+E.O. 123
+	
+	E.O.	2aa1a6#0246::nc.gov::STATE.governance
+	123	2aa1a6#0246::nc.gov::STATE.governance
+
+
+E. O. 123
+	
+	E.	2aa1a6#0246::nc.gov::STATE.governance
+	O.	2aa1a6#0246::nc.gov::STATE.governance
+	123	2aa1a6#0246::nc.gov::STATE.governance
+
+
+# general_statutes_citation
+General StatuTe 1
+	
+	General	2aa1a6#0247::nc.gov::STATE.governance
+	StatuTe	2aa1a6#0247::nc.gov::STATE.governance
+	1	2aa1a6#0247::nc.gov::STATE.governance
+
+
+GS1A
+	
+	GS1A	2aa1a6#0247::nc.gov::STATE.governance
+
+
+GS 123
+	
+	GS	2aa1a6#0247::nc.gov::STATE.governance
+	123	2aa1a6#0247::nc.gov::STATE.governance
+
+
+G.S. §123
+	
+	G.S.	2aa1a6#0247::nc.gov::STATE.governance
+	§	2aa1a6#0247::nc.gov::STATE.governance
+	123	2aa1a6#0247::nc.gov::STATE.governance
+
+
+G.S. § 123
+	
+	G.S.	2aa1a6#0247::nc.gov::STATE.governance
+	§	2aa1a6#0247::nc.gov::STATE.governance
+	123	2aa1a6#0247::nc.gov::STATE.governance
+
+
+# house_bill_citation
+H123
+	
+	H123	2aa1a6#0248::nc.gov::STATE.governance
+
+
+H1234
+	
+	H1234	2aa1a6#0248::nc.gov::STATE.governance
+
+
+House BiLl 123
+	
+	House	2aa1a6#0248::nc.gov::STATE.governance
+	BiLl	2aa1a6#0248::nc.gov::STATE.governance
+	123	2aa1a6#0248::nc.gov::STATE.governance
+
+
+H.B. 123
+	
+	H.B.	2aa1a6#0248::nc.gov::STATE.governance
+	123	2aa1a6#0248::nc.gov::STATE.governance
+
+
+H. B. 1
+	
+	H.	2aa1a6#0248::nc.gov::STATE.governance
+	B.	2aa1a6#0248::nc.gov::STATE.governance
+	1	2aa1a6#0248::nc.gov::STATE.governance
+
+
+# north_carolina_administrative_code_citation
+# The first two will be partial matches because CoreNLP thinks "Admin." ends a sentence.
+17 NC Admin. Code 5C.0703
+	
+	17	2aa1a6#0251::nc.gov::STATE.governance
+	NC	2aa1a6#0251::nc.gov::STATE.governance
+	Admin	2aa1a6#0251::nc.gov::STATE.governance
+	.	
+	Code	
+	5C	
+	.0703	
+
+
+17 N.C. Admin. Code 5C.0703
+	
+	17	2aa1a6#0251::nc.gov::STATE.governance
+	N.C.	2aa1a6#0251::nc.gov::STATE.governance
+	Admin	2aa1a6#0251::nc.gov::STATE.governance
+	.	
+	Code	
+	5C	
+	.0703	
+
+
+17 NCAC 5C.0703
+	
+	17	2aa1a6#0251::nc.gov::STATE.governance
+	NCAC	2aa1a6#0251::nc.gov::STATE.governance
+	5C	2aa1a6#0251::nc.gov::STATE.governance
+	.0703	2aa1a6#0251::nc.gov::STATE.governance
+
+
+# PII.bank_account_number
+123456789-123456
+	
+	123456789-123456	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+123456789 123456
+	
+	123456789	2aa1a6#0244::nc.gov::PII.bank_account_number
+	123456	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+223456789 12345678910131517
+	
+	223456789	2aa1a6#0244::nc.gov::PII.bank_account_number
+	12345678910131517	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+1234-5678-9-123456
+	
+	1234-5678-9-123456	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+1234-5678-9 123456
+	
+	1234-5678-9	2aa1a6#0244::nc.gov::PII.bank_account_number
+	123456	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+223456789 123456
+	
+	223456789	2aa1a6#0244::nc.gov::PII.bank_account_number
+	123456	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+223456789-123456
+	
+	223456789-123456	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+223456789 12345678910131517
+	
+	223456789	2aa1a6#0244::nc.gov::PII.bank_account_number
+	12345678910131517	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+123456789-123456
+	
+	123456789-123456	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+223456789 123456
+	
+	223456789	2aa1a6#0244::nc.gov::PII.bank_account_number
+	123456	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+223456789-123456
+	
+	223456789-123456	2aa1a6#0244::nc.gov::PII.bank_account_number
+
+
+# PII.credit_card_number
+1234-1234-1234-1234
+	
+	1234-1234-1234-1234	2aa1a6#0254::nc.gov::PII.credit_card_number
+
+
+1234 1234 1234 1234
+	
+	1234 1234 1234 1234	2aa1a6#0254::nc.gov::PII.credit_card_number
+
+
+4465-1234 5467-2341
+	
+	4465-1234 5467-2341	2aa1a6#0254::nc.gov::PII.credit_card_number
+
+
+# PII.drivers_license_number
+000012345678
+	
+	000012345678	2aa1a6#0240::nc.gov::PII.drivers_license_number
+
+
+# PII.employee_id
+# This will get overridden by the passport_number. Is what it is.
+12345678
+	
+	12345678	2aa1a6#0239::nc.gov::PII.passport_number
+
+
+# PII.passport_number
+12345678
+	
+	12345678	2aa1a6#0239::nc.gov::PII.passport_number
+
+
+a1234567
+	
+	a1234567	2aa1a6#0239::nc.gov::PII.passport_number
+
+
+A1234567
+	
+	A1234567	2aa1a6#0239::nc.gov::PII.passport_number
+
+
+# PII.social_security_number
+433-91-9072
+	
+	433-91-9072	2aa1a6#0245::nc.gov::PII.social_security_number
+
+
+155 21 7104
+	
+	155	2aa1a6#0245::nc.gov::PII.social_security_number
+	21	2aa1a6#0245::nc.gov::PII.social_security_number
+	7104	2aa1a6#0245::nc.gov::PII.social_security_number
+
+
+# the following is a zip code and SHOULD NOT match as an SSN.
+27405-5012
+	
+	27405-5012	
+
+
+# PII.taxpayer_id
+12-1234567
+	
+	12-1234567	2aa1a6#0241::nc.gov::PII.taxpayer_id
+
+
+12-1234567A
+	
+	12-1234567A	2aa1a6#0241::nc.gov::PII.taxpayer_id
+
+
+12-1234567001
+	
+	12-1234567001	2aa1a6#0241::nc.gov::PII.taxpayer_id
+
+
+# senate_bill_citation
+S123
+	
+	S123	2aa1a6#0249::nc.gov::STATE.governance
+
+
+S1234
+	
+	S1234	2aa1a6#0249::nc.gov::STATE.governance
+
+
+Senate BiLl 123
+	
+	Senate	2aa1a6#0249::nc.gov::STATE.governance
+	BiLl	2aa1a6#0249::nc.gov::STATE.governance
+	123	2aa1a6#0249::nc.gov::STATE.governance
+
+
+senate bill12
+	
+	senate	2aa1a6#0249::nc.gov::STATE.governance
+	bill12	2aa1a6#0249::nc.gov::STATE.governance
+
+
+S.B. 123
+	
+	S.B.	2aa1a6#0249::nc.gov::STATE.governance
+	123	2aa1a6#0249::nc.gov::STATE.governance
+
+
+S. B. 1
+	
+	S.	2aa1a6#0249::nc.gov::STATE.governance
+	B.	2aa1a6#0249::nc.gov::STATE.governance
+	1	2aa1a6#0249::nc.gov::STATE.governance
+
+
+# session_law_citation
+Session Law 1234-1
+	
+	Session	2aa1a6#0250::nc.gov::STATE.governance
+	Law	2aa1a6#0250::nc.gov::STATE.governance
+	1234-1	2aa1a6#0250::nc.gov::STATE.governance
+
+
+session lAw 1234-1
+	
+	session	2aa1a6#0250::nc.gov::STATE.governance
+	lAw	2aa1a6#0250::nc.gov::STATE.governance
+	1234-1	2aa1a6#0250::nc.gov::STATE.governance
+
+
+SL 1234-134
+	
+	SL	2aa1a6#0250::nc.gov::STATE.governance
+	1234-134	2aa1a6#0250::nc.gov::STATE.governance
+
+
+S.L. 1234-1
+	
+	S.L.	2aa1a6#0250::nc.gov::STATE.governance
+	1234-1	2aa1a6#0250::nc.gov::STATE.governance
+
+
+S. L. 1234-1
+	
+	S.	2aa1a6#0250::nc.gov::STATE.governance
+	L.	2aa1a6#0250::nc.gov::STATE.governance
+	1234-1	2aa1a6#0250::nc.gov::STATE.governance
+
+
+# TOMES.email_address
+single@foo.com
+	
+	single@foo.com	2aa1a6#0002::nc.gov::TOMES.email_address
+
+
+dot.ted@foo.edu
+	
+	dot.ted@foo.edu	2aa1a6#0002::nc.gov::TOMES.email_address
+
+
+dot.ted@dot.ted.gov
+	
+	dot.ted@dot.ted.gov	2aa1a6#0002::nc.gov::TOMES.email_address
+
+
+d.ot.ted@ws.ws
+	
+	d.ot.ted@ws.ws	2aa1a6#0002::nc.gov::TOMES.email_address
+
+
+ip.address@[127.0.0.1]
+	
+	ip.address@[127.0.0.1]	2aa1a6#0002::nc.gov::TOMES.email_address
+
+
+UPPER@CASE.FOO
+	
+	UPPER@CASE.FOO	2aa1a6#0002::nc.gov::TOMES.email_address
+
+
+# TOMES.URL
+# This will miss the FTP pattern because CoreNLP appears to tokenize the colon and slashes following "ftp" (but not those after http|https).
+http://foo.com/blah_blah
+	
+	http://foo.com/blah_blah	2aa1a6#0001::nc.gov::TOMES.URL
+
+
+http://foo.com/blah_blah/
+	
+	http://foo.com/blah_blah/	2aa1a6#0001::nc.gov::TOMES.URL
+
+
+http://foo.com/blah_blah_(wikipedia)
+	
+	http://foo.com/blah_blah_	2aa1a6#0001::nc.gov::TOMES.URL
+	(	
+	wikipedia	
+	)	
+
+
+http://foo.com/blah_blah_(wikipedia)_(again)
+	
+	http://foo.com/blah_blah_	2aa1a6#0001::nc.gov::TOMES.URL
+	(	
+	wikipedia	
+	)	
+	_	
+	(	
+	again	
+	)	
+
+
+ftp://www.example.com/wpstyle/?p=364
+	
+	ftp	
+	:	
+	/	
+	/	
+	www.example.com/wpstyle/?p=364	
+
+
+https://www.example.com/foo/?bar=baz&inga=42&quux
+	
+	https://www.example.com/foo/?bar=baz&inga=42&quux	2aa1a6#0001::nc.gov::TOMES.URL
+
+
+# united_states_code_citation
+1 USC 1
+	
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+	USC	2aa1a6#0253::nc.gov::FEDERAL.governance
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+
+
+1 USC 123
+	
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+	USC	2aa1a6#0253::nc.gov::FEDERAL.governance
+	123	2aa1a6#0253::nc.gov::FEDERAL.governance
+
+
+1 USC 123-1234
+	
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+	USC	2aa1a6#0253::nc.gov::FEDERAL.governance
+	123-1234	2aa1a6#0253::nc.gov::FEDERAL.governance
+
+
+1 U.S.C 1
+	
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+	U.S.C	2aa1a6#0253::nc.gov::FEDERAL.governance
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+
+
+1 U.S.C 123
+	
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+	U.S.C	2aa1a6#0253::nc.gov::FEDERAL.governance
+	123	2aa1a6#0253::nc.gov::FEDERAL.governance
+
+
+1 U.S.C 123.1234
+	
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+	U.S.C	2aa1a6#0253::nc.gov::FEDERAL.governance
+	123.1234	2aa1a6#0253::nc.gov::FEDERAL.governance
+
+
+1 USC § 1
+	
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+	USC	2aa1a6#0253::nc.gov::FEDERAL.governance
+	§	2aa1a6#0253::nc.gov::FEDERAL.governance
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+
+
+1 USC § 123
+	
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+	USC	2aa1a6#0253::nc.gov::FEDERAL.governance
+	§	2aa1a6#0253::nc.gov::FEDERAL.governance
+	123	2aa1a6#0253::nc.gov::FEDERAL.governance
+
+
+59 USC §§ 123-1234
+	
+	59	2aa1a6#0253::nc.gov::FEDERAL.governance
+	USC	2aa1a6#0253::nc.gov::FEDERAL.governance
+	§	2aa1a6#0253::nc.gov::FEDERAL.governance
+	§	2aa1a6#0253::nc.gov::FEDERAL.governance
+	123-1234	2aa1a6#0253::nc.gov::FEDERAL.governance
+
+
+1 USC 123-0234
+	
+	1	2aa1a6#0253::nc.gov::FEDERAL.governance
+	USC	2aa1a6#0253::nc.gov::FEDERAL.governance
+	123-0234	2aa1a6#0253::nc.gov::FEDERAL.governance
+
+
