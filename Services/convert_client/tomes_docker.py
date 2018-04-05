@@ -1,13 +1,6 @@
 from flask import Flask, render_template,  make_response
-import subprocess
 
 app = Flask(__name__, static_url_path="/static")
-
-
-@app.route('/elastic')
-def do_stop_start_elastic():
-    response = make_response(render_template('elastic_server.html'))
-    return response
 
 
 @app.route('/pst')
