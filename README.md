@@ -14,7 +14,7 @@ Repository | Purpose
 [tomes-tool](https://github.com/StateArchivesOfNorthCarolina/tomes_tool) | Uses Stanford CoreNLP to tag the emails in the EAXS file using either standard or custom tagging schemas
 
 
-##Dataflow Model
+## Dataflow Model
 
 ![URM](docs/tomes_prgram_flow.png)
 
