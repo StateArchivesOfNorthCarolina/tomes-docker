@@ -18,3 +18,14 @@ Repository | Purpose
 
 ![URM](docs/tomes_prgram_flow.png)
 
+## Basic Install
+
+First install docker on the platform of your choice.
+
+Platform | Download | Instructions
+-------- | -------- | ------------
+Win7     | [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/) | [Instructions](#windows-7-install)
+MacOS    | [Docker Community Edition Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) | [Instructions](#macos-install)
+Windows 10 | [Docker Community Edition Windows 10](https://store.docker.com/editions/community/docker-ce-desktop-windows) | [Instructions](#windows-10-install)
+
+
