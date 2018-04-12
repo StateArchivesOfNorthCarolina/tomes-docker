@@ -9,9 +9,9 @@ into a complete docker application.
 
 Repository | Purpose
 ---------- | --------
-[pst-extractor](https://github.com/StateArchivesOfNorthCarolina/pst-extractor) | This program can be used to extract Mime emails from an PST file.
-[DarcMailCLI](https://github.com/StateArchivesOfNorthCarolina/DarcMailCLI) | Converts Mime Email to EAXS representation
-[tomes-tool](https://github.com/StateArchivesOfNorthCarolina/tomes_tool) | Uses Stanford CoreNLP to tag the emails in the EAXS file using either standard or custom tagging schemas
+[tomes-pst-extractor](https://github.com/StateArchivesOfNorthCarolina/tomes-pst-extractor) | This program can be used to extract Mime emails from an PST file.
+[tomes-darcmail](https://github.com/StateArchivesOfNorthCarolina/tomes-darcmail) | Converts Mime Email to EAXS representation
+[tomes-tagger](https://github.com/StateArchivesOfNorthCarolina/tomes_tagger) | Uses Stanford CoreNLP to tag the emails in the EAXS file using either standard or custom tagging schemas
 
 
 ## Dataflow Model
