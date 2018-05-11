@@ -1,15 +1,46 @@
-from autobahn.twisted.websocket import WebSocketServerProtocol, WebSocketServerFactory, listenWS
+#
+# Copyright © 2016 Jeremy Gibson <jeremy.gibson@ncdcr.gov>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import os
 import json
 import subprocess
 import sys
 from queue import Queue, Empty
 from threading import Thread
+from autobahn.twisted.websocket import WebSocketServerProtocol, WebSocketServerFactory, listenWS
 from twisted.python import log
 from twisted.internet import reactor
 
 
 class DarcMailConvert(WebSocketServerProtocol):
+    """DarcMailConvert manages communication with the tomes-docker web client for the tomes-darcmail application. It
+    implements a Websocket server for communication with a Flask client.
+
+    Attributes:
+        server_name: A string identifying the server.
+        on_posix: A boolean that indicates whether this is a posix system.  Used by queue.
+        cur_folder: A string populated from the web-client.
+        cur_folder: A boolean populated from the web-client.
+        chunk: A boolean populated from the web-client.
+        chunk-size: An integer that indicates the number of messages in a chunk.
+        transfer-name: A String indicating the name of the account.
+        build_opts: A list to hold the options needed for the subprocess.
+        file_tree: A list to hold the folder names found in mime-sources.
+        production: A boolean to help switch between production and development paths.
+    """
     WS_FOLDER_LIST = 1
     WS_RECV_PACKAGE = 2
     WS_PROG_ON = 4
@@ -36,17 +67,19 @@ class DarcMailConvert(WebSocketServerProtocol):
             self.dm_exec = 'D:\\Development\\Python\\DockerComposeStruct\\devel\\tomes_docker_app\\Servers\\darcm_server\\docker_dmc\\DarcMailCLI.py'
             self.base_package_location = 'E:\\RESOURCES\\TEST_RESOURCES\\tomes\\data'
 
-    def onConnect(self, request):
+    def onConnect(self, request) -> tuple:
         print("{}: Connected".format(self.server_name))
         headers = {'Access-Control-Allow-Origin': '*'}
         return None, headers
 
     def onOpen(self):
         s = self._get_folder_tree()
-        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_FOLDER_LIST, s))
-        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_SEND, 'Client connected!'))
+        self.sendMessage(self._get_message_for_sending(DarcMailConvert.WS_FOLDER_LIST, s))
+        self.sendMessage(self._get_message_for_sending(DarcMailConvert.WS_SEND, 'Client connected!'))
 
-    def _get_folder_tree(self):
+    def _get_folder_tree(self) -> str:
+        """Gets mime-sources folder names from the tomes directory structure, and returns to the Flask client
+        TODO: change mboxes to mime-sources"""
         children = os.listdir(os.path.join(self.base_package_location, 'mboxes'))
         nc = []
         for c in children:
@@ -66,13 +99,13 @@ class DarcMailConvert(WebSocketServerProtocol):
                 self.chunk_size = payload['data']['chunk_size']
                 self.from_eml = payload['data']['from_eml']
                 self.transfer_name = payload['data']['trans_name']
-                self.build_convert_opts()
+                self._build_convert_opts()
                 # callInThread necessary to prevent blocking
-                reactor.callInThread(self.convert)
+                reactor.callInThread(self._convert)
             if payload['o'] == 5:
-                self.get(payload['data']['fldr'])
+                self._get_suggested_name(payload['data']['fldr'])
 
-    def find_folder(self, folder):
+    def _find_folder(self, folder) -> str:
         for root, dirs, files in os.walk(self.base_package_location):
             for d in dirs:
                 #self.sendMessage(self.get_message_for_sending(2, "Fldrs: {}".format(d)))
@@ -82,9 +115,8 @@ class DarcMailConvert(WebSocketServerProtocol):
     def onClose(self, wasClean, code, reason):
         print("WebSocket connection closed: {0}".format(reason))
 
-    def get(self, fldr) -> str:
-        # Get a suggested transfer_name
-        #self.sendMessage(self.get_message_for_sending(2, "Base package is {}".format(self.base_package_location)))
+    def _get_suggested_name(self, fldr):
+        """Suggests a name for the transfer."""
         for root, dirs, files in os.walk(self.base_package_location):
             for d in dirs:
                 if d == fldr:
@@ -93,11 +125,12 @@ class DarcMailConvert(WebSocketServerProtocol):
                     final = root_split[i:] + [d]
                     final = '_'.join(final)
                     final = final.replace(" ", "_")
-                    self.sendMessage(self.get_message_for_sending(5, final))
+                    self.sendMessage(self._get_message_for_sending(5, final))
 
-    def build_convert_opts(self):
+    def _build_convert_opts(self):
+        """Builds the list of arguments to be passed to the subprocess call."""
         self.build_opts = ['python', self.dm_exec]
-        package_location = self.find_folder(self.cur_folder)
+        package_location = self._find_folder(self.cur_folder)
 
         # BEGIN REQUIRED These are required
         self.build_opts.append('-a')
@@ -129,23 +162,34 @@ class DarcMailConvert(WebSocketServerProtocol):
             self.build_opts[i] = str(self.build_opts[i])
 
     def enqueue_out(self, out, queue):
+        """Where the worker thread sends logging messages from the subprocess.
+        Keeps the twisted process from blocking"""
         for line in iter(out.readline, b''):
             queue.put(line)
         out.close()
 
-    def get_message_for_sending(self, router, message):
+    def _get_message_for_sending(self, router, message) -> str:
+        """Helper function to build WebSocket messages
+
+        Args:
+            router: An integer that indicates the callback function to run on the client.
+            message: A string with the message to send to the client function.
+        """
         l = json.dumps({'router': router, 'data': message})
         return l.encode('utf-8')
 
-    def convert(self):
+    def _convert(self):
+        """The worker function for the class.  Calls the tomes-darcmail program and returns its logging messages back
+        to the WebSocket client.
+        """
         p = subprocess.Popen(self.build_opts, stdout=subprocess.PIPE, bufsize=1, close_fds=self.on_posix)
         q = Queue()
         t = Thread(target=self.enqueue_out, args=(p.stdout, q))
         t.daemon = True
-        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_SEND, "Processing: {}".format(self.cur_folder)))
+        self.sendMessage(self._get_message_for_sending(DarcMailConvert.WS_SEND, "Processing: {}".format(self.cur_folder)))
         t.start()
         line = None
-        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_PROG_ON, ''))
+        self.sendMessage(self._get_message_for_sending(DarcMailConvert.WS_PROG_ON, ''))
         while t.is_alive():
             try:
                 # Wait for a line to be generated.
@@ -158,8 +202,8 @@ class DarcMailConvert(WebSocketServerProtocol):
                 sender = json.dumps({'router': DarcMailConvert.WS_SEND, 'data': l.strip()})
                 self.sendMessage(sender.encode('utf-8'))
 
-        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_SEND, "Complete"))
-        self.sendMessage(self.get_message_for_sending(DarcMailConvert.WS_PROG_OFF, ''))
+        self.sendMessage(self._get_message_for_sending(DarcMailConvert.WS_SEND, "Complete"))
+        self.sendMessage(self._get_message_for_sending(DarcMailConvert.WS_PROG_OFF, ''))
 
 
 if __name__ == "__main__":
