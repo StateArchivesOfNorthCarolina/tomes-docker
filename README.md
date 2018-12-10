@@ -1,31 +1,5 @@
-## Introduction
+# TOMES Docker
 
-This repository contains a complete docker application, which for simplicity, we will refer to this
-repository as the TOMES application.
+This Docker application provides access to a subset of the [TOMES project repositories](https://github.com/StateArchivesOfNorthCarolina?utf8=✓&q=tomes).
 
-The TOMES project, and this repository, is built out of a few different stand alone applications that have been compiled
-into a complete docker application.
-
-
-Repository | Purpose
----------- | --------
-[tomes-pst-extractor](https://github.com/StateArchivesOfNorthCarolina/tomes-pst-extractor) | This program can be used to extract Mime emails from an PST file.
-[tomes-darcmail](https://github.com/StateArchivesOfNorthCarolina/tomes-darcmail) | Converts Mime Email to EAXS representation
-[tomes-tagger](https://github.com/StateArchivesOfNorthCarolina/tomes_tagger) | Uses Stanford CoreNLP to tag the emails in the EAXS file using either standard or custom tagging schemas
-
-
-## Dataflow Model
-
-![URM](docs/tomes_prgram_flow.png)
-
-## Basic Install
-
-First install docker on the platform of your choice.
-
-Platform | Download | Instructions
--------- | -------- | ------------
-Windows 7     | [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/) | [Instructions](#windows-7-install)
-MacOS    | [Docker Community Edition Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) | [Instructions](#macos-install)
-Windows 10 | [Docker Community Edition Windows 10](https://store.docker.com/editions/community/docker-ce-desktop-windows) | [Instructions](#windows-10-install)
-
-
+For more information, see the [TOMES project documentation](https://github.com/StateArchivesOfNorthCarolina/tomes-project).
