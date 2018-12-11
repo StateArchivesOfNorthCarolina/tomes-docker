@@ -5,4 +5,4 @@
 @rem
 @rem ##########################################################################
 
-docker-compose.exe up
+docker-compose -f .\docker-compose__WINDOWS.yml up
