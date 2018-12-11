@@ -1,0 +1,47 @@
+version: '2'
+
+services:
+  main-client:
+    image: govsanc/main-client
+    ports:
+    - 80:80
+    depends_on:
+    - pst-server
+    - darcmail-server
+    - ner-server
+    - corenlp-server
+    links:
+    - pst-server
+    - darcmail-server
+    - ner-server
+    - corenlp-server
+    volumes:
+    - C:\TOMES\data:/home/tomes/data
+    - C:\TOMES\var\run\docker.sock:/var/run/docker.sock
+    - C:\TOMES\usr\bin\docker:/usr/bin/docker
+  pst-server:
+    image: govsanc/pst-server
+    ports:
+    - 9000:9000
+    volumes:
+    - C:\TOMES\data:/home/tomes/data
+    - C:\TOMES\var\run\docker.sock:/var/run/docker.sock
+    - C:\TOMES\usr\bin\docker:/usr/bin/docker
+  darcmail-server:
+    image: govsanc/darcmail-server
+    ports:
+    - 9001:9001
+    volumes:
+    - C:\TOMES\data:/home/tomes/data
+  ner-server:
+    image: govsanc/ner-server
+    ports:
+    - 9002:9002
+    volumes:
+    - C:\TOMES\data:/home/tomes/data
+  corenlp-server:
+    image: govsanc/corenlp-server
+    ports:
+    - 9003:9003
+    volumes:
+    - C:\TOMES\data:/home/tomes/data
